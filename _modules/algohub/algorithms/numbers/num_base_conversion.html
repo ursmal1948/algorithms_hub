@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algohub.algorithms.numbers.num_base_conversion &mdash; algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../docs/_build/html/index.html" class="icon icon-home">
+            algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../docs/_build/html/index.html">algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">algohub.algorithms.numbers.num_base_conversion</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for algohub.algorithms.numbers.num_base_conversion</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides functions for working with conversion between number systems.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="decimal_to_any">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.decimal_to_any">[docs]</a>
+<span class="k">def</span> <span class="nf">decimal_to_any</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">base</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a decimal number to its representation in the specified base.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        n (int): The decimal number to convert.</span>
+<span class="sd">        base (int): The base to convert the number to. Must be 2 or 8.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The number&#39;s representation in the specified base.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If the specified base is not 2 or 8.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">base</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Uncorrect base. Must be 2 or 8&#39;</span><span class="p">)</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">remainder</span> <span class="o">=</span> <span class="n">n</span> <span class="o">%</span> <span class="n">base</span>
+        <span class="n">digits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">//=</span> <span class="n">base</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="any_to_decimal">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.any_to_decimal">[docs]</a>
+<span class="k">def</span> <span class="nf">any_to_decimal</span><span class="p">(</span><span class="n">num_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">base</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a number in the specified base to its decimal representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        num_str (str): The number in the specified base.</span>
+<span class="sd">        base (int): The base of the input number. Must be 2 or 8.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The decimal representation of the input number.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If the specified base is not 2 or 8.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">base</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Uncorrect base. Must be 2 or 8&#39;</span><span class="p">)</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">power</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_str</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="n">num_str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">base</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">digit</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+            <span class="n">digits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">power</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">base</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+            <span class="n">digits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">8</span> <span class="o">**</span> <span class="n">power</span><span class="p">))</span>
+        <span class="n">power</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">digits</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="binary_to_hexadecimal">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.binary_to_hexadecimal">[docs]</a>
+<span class="k">def</span> <span class="nf">binary_to_hexadecimal</span><span class="p">(</span><span class="n">binary_num</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a binary number to its hexadecimal representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        binary_num (str): The binary number to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The hexadecimal representation of the input binary number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">binary_num</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">binary_num</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="n">binary_num</span>
+    <span class="n">groups_of_four</span> <span class="o">=</span> <span class="p">[</span><span class="n">binary_num</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">binary_num</span><span class="p">),</span> <span class="mi">4</span><span class="p">)]</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups_of_four</span><span class="p">:</span>
+        <span class="n">pow_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">sum_</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">group</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+                <span class="n">sum_</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">pow_</span><span class="p">)</span>
+            <span class="n">pow_</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">digits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sum_</span><span class="p">)</span>
+    <span class="n">decimal_to_hex</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">hexadecimal</span> <span class="o">=</span> <span class="p">[</span><span class="n">decimal_to_hex</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">]</span>
+    <span class="k">while</span> <span class="n">hexadecimal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span><span class="p">:</span>
+        <span class="n">hexadecimal</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">hexadecimal</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="hexadecimal_to_binary">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.hexadecimal_to_binary">[docs]</a>
+<span class="k">def</span> <span class="nf">hexadecimal_to_binary</span><span class="p">(</span><span class="n">hex_num</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a hexadecimal number to its binary representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        hex_num (str): The hexadecimal number to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The binary representation of the input hexadecimal number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">hex_to_bin</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="s1">&#39;0000&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="s1">&#39;0001&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;2&#39;</span><span class="p">:</span> <span class="s1">&#39;0010&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="s1">&#39;0011&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;4&#39;</span><span class="p">:</span> <span class="s1">&#39;0100&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;5&#39;</span><span class="p">:</span> <span class="s1">&#39;0101&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;6&#39;</span><span class="p">:</span> <span class="s1">&#39;0110&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;7&#39;</span><span class="p">:</span> <span class="s1">&#39;0111&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;8&#39;</span><span class="p">:</span> <span class="s1">&#39;1000&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;9&#39;</span><span class="p">:</span> <span class="s1">&#39;1001&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="s1">&#39;1010&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="s1">&#39;1011&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="s1">&#39;1100&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="s1">&#39;1101&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="s1">&#39;1110&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="s1">&#39;1111&#39;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">hex_to_bin</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">hex_num</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="decimal_to_hexadecimal">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.decimal_to_hexadecimal">[docs]</a>
+<span class="k">def</span> <span class="nf">decimal_to_hexadecimal</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a decimal number to its hexadecimal representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        n (int): The decimal number to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The hexadecimal representation of the input decimal number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">binary_representation</span> <span class="o">=</span> <span class="n">decimal_to_any</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binary_to_hexadecimal</span><span class="p">(</span><span class="n">binary_representation</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="hexadecimal_to_decimal">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.hexadecimal_to_decimal">[docs]</a>
+<span class="k">def</span> <span class="nf">hexadecimal_to_decimal</span><span class="p">(</span><span class="n">num_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a hexadecimal number to its decimal representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        num_str (str): The hexadecimal number to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The decimal representation of the input hexadecimal number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">binary_representation</span> <span class="o">=</span> <span class="n">hexadecimal_to_binary</span><span class="p">(</span><span class="n">num_str</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">any_to_decimal</span><span class="p">(</span><span class="n">binary_representation</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="binary_to_octal">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.binary_to_octal">[docs]</a>
+<span class="k">def</span> <span class="nf">binary_to_octal</span><span class="p">(</span><span class="n">binary</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a binary number to its octal representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        binary (str): The binary number to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The octal representation of the input binary number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">binary</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="n">binary</span>
+    <span class="n">groups_of_three</span> <span class="o">=</span> <span class="p">[</span><span class="n">binary</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">binary</span><span class="p">),</span> <span class="mi">3</span><span class="p">)]</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups_of_three</span><span class="p">:</span>
+        <span class="n">pow_</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">sum_</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">group</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+                <span class="n">sum_</span> <span class="o">+=</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">pow_</span>
+            <span class="n">pow_</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">digits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sum_</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="n">digits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">digits</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">]))</span></div>
+
+
+
+<div class="viewcode-block" id="octal_to_binary">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.octal_to_binary">[docs]</a>
+<span class="k">def</span> <span class="nf">octal_to_binary</span><span class="p">(</span><span class="n">octal</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an octal number to its binary representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        octal (int): The octal number to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The binary representation of the input octal number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">oct_to_bin</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="s2">&quot;000&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="s1">&#39;001&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;2&#39;</span><span class="p">:</span> <span class="s1">&#39;010&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="s1">&#39;011&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;4&#39;</span><span class="p">:</span> <span class="s1">&#39;100&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;5&#39;</span><span class="p">:</span> <span class="s1">&#39;101&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;6&#39;</span><span class="p">:</span> <span class="s1">&#39;110&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;7&#39;</span><span class="p">:</span> <span class="s1">&#39;111&#39;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">oct_to_bin</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">octal</span><span class="p">)])</span></div>
+
+
+
+<div class="viewcode-block" id="octal_to_hexadecimal">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.octal_to_hexadecimal">[docs]</a>
+<span class="k">def</span> <span class="nf">octal_to_hexadecimal</span><span class="p">(</span><span class="n">octal</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an octal number to its hexadecimal representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        octal (int): The octal number to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The hexadecimal representation of the input octal number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">binary_str</span> <span class="o">=</span> <span class="n">octal_to_binary</span><span class="p">(</span><span class="n">octal</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binary_to_hexadecimal</span><span class="p">(</span><span class="n">binary_str</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="hexadecimal_to_octal">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.numbers.html#algohub.algorithms.numbers.num_base_conversion.hexadecimal_to_octal">[docs]</a>
+<span class="k">def</span> <span class="nf">hexadecimal_to_octal</span><span class="p">(</span><span class="n">hexadecimal_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a hexadecimal number to its octal representation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        hexadecimal_str (str): The hexadecimal number to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The octal representation of the input hexadecimal number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">binary_str</span> <span class="o">=</span> <span class="n">hexadecimal_to_binary</span><span class="p">(</span><span class="n">hexadecimal_str</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binary_to_octal</span><span class="p">(</span><span class="n">binary_str</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

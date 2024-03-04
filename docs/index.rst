@@ -1,9 +1,9 @@
-.. Algorithms' hub documentation master file, created by
-   sphinx-quickstart on Mon Mar  4 20:54:36 2024.
+.. algorithms' hub documentation master file, created by
+   sphinx-quickstart on Mon Mar  4 21:16:39 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Algorithms' hub's documentation!
+Welcome to algorithms' hub's documentation!
 ===========================================
 
 .. toctree::
@@ -11,7 +11,6 @@ Welcome to Algorithms' hub's documentation!
    :caption: Contents:
 
    modules
-
 
 Indices and tables
 ==================

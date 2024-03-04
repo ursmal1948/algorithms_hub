@@ -5,12 +5,13 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+
 import os
 import sys
 
 sys.path.insert(0, os.path.abspath('..'))
 
-project = "Algorithms' hub"
+project = "algorithms' hub"
 copyright = '2024, Ula Malinowska'
 author = 'Ula Malinowska'
 release = '1.0.0'

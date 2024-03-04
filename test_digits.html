@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tests.numbers.test_digits &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+        <script src="../../../docs/_build/html/_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../docs/_build/html/_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../docs/_build/html/_static/doctools.js?v=888ff710"></script>
+        <script src="../../../docs/_build/html/_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../docs/_build/html/_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../docs/_build/html/index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../docs/_build/html/index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="_modules/index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tests.numbers.test_digits</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tests.numbers.test_digits</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">algohub.algorithms.numbers.digits</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">get_digit</span><span class="p">,</span>
+    <span class="n">sum_digits</span><span class="p">,</span>
+    <span class="n">move_zeroes</span><span class="p">,</span>
+    <span class="n">validate_luhn</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="TestGetDigit">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestGetDigit">[docs]</a>
+<span class="k">class</span> <span class="nc">TestGetDigit</span><span class="p">:</span>
+<div class="viewcode-block" id="TestGetDigit.test_get_digit">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestGetDigit.test_get_digit">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;number, position, expected_result&quot;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">534</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">534</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">534</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">534</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">-</span><span class="mi">534</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">534</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Position must be a non-negative number&#39;</span><span class="p">)),</span>
+
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_get_digit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">expected_result</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">):</span>
+            <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">expected_result</span><span class="p">))</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">get_digit</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">expected_result</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">get_digit</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestSumDigits">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestSumDigits">[docs]</a>
+<span class="k">class</span> <span class="nc">TestSumDigits</span><span class="p">:</span>
+<div class="viewcode-block" id="TestSumDigits.number_and_expected_sum">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestSumDigits.number_and_expected_sum">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">987654321</span><span class="p">,</span> <span class="mi">45</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">123</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+    <span class="k">def</span> <span class="nf">number_and_expected_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span></div>
+
+
+<div class="viewcode-block" id="TestSumDigits.test_sum_digits">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestSumDigits.test_sum_digits">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_sum_digits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_and_expected_sum</span><span class="p">):</span>
+        <span class="n">number</span><span class="p">,</span> <span class="n">expected_digits_sum</span> <span class="o">=</span> <span class="n">number_and_expected_sum</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">number_and_expected_sum</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">sum_digits</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_digits_sum</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestMoveZeroes">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestMoveZeroes">[docs]</a>
+<span class="k">class</span> <span class="nc">TestMoveZeroes</span><span class="p">:</span>
+<div class="viewcode-block" id="TestMoveZeroes.numbers_and_expected_result_after_moving_zeroes">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestMoveZeroes.numbers_and_expected_result_after_moving_zeroes">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span>
+        <span class="n">params</span><span class="o">=</span><span class="p">[([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span> <span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span> <span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span>
+                <span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">([],</span> <span class="p">[])])</span>
+    <span class="k">def</span> <span class="nf">numbers_and_expected_result_after_moving_zeroes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span></div>
+
+
+<div class="viewcode-block" id="TestMoveZeroes.test_move_zeroes">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestMoveZeroes.test_move_zeroes">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_move_zeroes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numbers_and_expected_result_after_moving_zeroes</span><span class="p">):</span>
+        <span class="n">numbers_list</span><span class="p">,</span> <span class="n">expected_numbers_with_zeroes_moved_to_the_end</span> <span class="o">=</span> <span class="n">numbers_and_expected_result_after_moving_zeroes</span>
+        <span class="k">assert</span> <span class="n">move_zeroes</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_numbers_with_zeroes_moved_to_the_end</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestValidateLuhn">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestValidateLuhn">[docs]</a>
+<span class="k">class</span> <span class="nc">TestValidateLuhn</span><span class="p">:</span>
+<div class="viewcode-block" id="TestValidateLuhn.test">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.numbers.html#tests.numbers.test_digits.TestValidateLuhn.test">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;credit_card_number, expected_result&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;1234567890123456&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;4245110203731942&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;79927398713&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;79927398714&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">],</span>
+
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">credit_card_number</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">):</span>
+        <span class="n">validation_result</span> <span class="o">=</span> <span class="n">validate_luhn</span><span class="p">(</span><span class="n">credit_card_number</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">validation_result</span> <span class="o">==</span> <span class="n">expected_result</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

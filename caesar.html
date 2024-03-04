@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algohub.algorithms.ciphers.caesar &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../docs/_build/html/_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../docs/_build/html/_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+        <script src="../../../../docs/_build/html/_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../docs/_build/html/_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../../docs/_build/html/_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../docs/_build/html/_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../docs/_build/html/_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../docs/_build/html/index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../docs/_build/html/index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="_modules/index.html">Module code</a></li>
+      <li class="breadcrumb-item active">algohub.algorithms.ciphers.caesar</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for algohub.algorithms.ciphers.caesar</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides functions for encoding and decoding text using the Caesar cipher.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">ClassVar</span>
+<span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">ascii_uppercase</span>
+
+
+<div class="viewcode-block" id="CaesarCipher">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.ciphers.html#algohub.algorithms.ciphers.caesar.CaesarCipher">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">CaesarCipher</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class for implementing the Caesar cipher, a simple substitution cipher</span>
+<span class="sd">    where each letter in the plaintext is shifted a certain number of places</span>
+<span class="sd">    down or up the alphabet.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        sequence:str</span>
+<span class="sd">         A sequence of characters representing the alphabet. Default is the</span>
+<span class="sd">         ASCII uppercase characters.</span>
+<span class="sd">        shift: int</span>
+<span class="sd">         The number of positions each letter is shifted. Default is 3.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">sequence</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">ascii_uppercase</span>
+    <span class="n">shift</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="k">def</span> <span class="nf">_encrypt_char</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">char</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Encrypts a single character using the Caesar cipher.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            char (str): The character to be encrypted.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The encrypted character.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">char</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sequence</span><span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">sequence</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">char</span>
+
+    <span class="k">def</span> <span class="nf">_decrypt_char</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">char</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Decrypts a single character using the Caesar cipher.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            char (str): The character to be decrypted.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The decrypted character.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">char</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sequence</span><span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">sequence</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">char</span>
+
+<div class="viewcode-block" id="CaesarCipher.encrypt">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.ciphers.html#algohub.algorithms.ciphers.caesar.CaesarCipher.encrypt">[docs]</a>
+    <span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Encrypts a given text using the Caesar cipher.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            text (str): The text to be encrypted.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The encrypted text.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">_encrypt_char</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="CaesarCipher.decrypt">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.ciphers.html#algohub.algorithms.ciphers.caesar.CaesarCipher.decrypt">[docs]</a>
+    <span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encrypted_text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Decrypts a given encrypted text using the Caesar cipher.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            encrypted_text (str): The encrypted text to be decrypted.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The decrypted text.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">_decrypt_char</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">encrypted_text</span><span class="p">])</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

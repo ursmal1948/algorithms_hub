@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algohub.algorithms.math.arithmetic_algorithms &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../docs/_build/html/_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../docs/_build/html/_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+        <script src="../../../../docs/_build/html/_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../docs/_build/html/_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../../docs/_build/html/_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../docs/_build/html/_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../docs/_build/html/_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../docs/_build/html/index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../docs/_build/html/index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="_modules/index.html">Module code</a></li>
+      <li class="breadcrumb-item active">algohub.algorithms.math.arithmetic_algorithms</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for algohub.algorithms.math.arithmetic_algorithms</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides functions for various mathematical algorithms,</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="binary_search">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.math.html#algohub.algorithms.math.arithmetic_algorithms.binary_search">[docs]</a>
+<span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">numbers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">looked_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Performs binary search to find the index of the looked number in the sorted list of numbers</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        numbers (list[int]): A sorted list of integers.</span>
+<span class="sd">        looked_number (int): The integer to be found in the list.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int | bool: If the looked_number is found in the list, returns the index of the number,</span>
+<span class="sd">        otherwise False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">first_index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">end_index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">first_index</span> <span class="o">&lt;=</span> <span class="n">end_index</span><span class="p">:</span>
+        <span class="n">middle_element_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">first_index</span> <span class="o">+</span> <span class="n">end_index</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">looked_number</span> <span class="o">==</span> <span class="n">numbers</span><span class="p">[</span><span class="n">middle_element_index</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="n">middle_element_index</span>
+        <span class="k">if</span> <span class="n">looked_number</span> <span class="o">&lt;</span> <span class="n">numbers</span><span class="p">[</span><span class="n">middle_element_index</span><span class="p">]:</span>
+            <span class="n">end_index</span> <span class="o">=</span> <span class="n">middle_element_index</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">first_index</span> <span class="o">=</span> <span class="n">middle_element_index</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
+
+
+
+<div class="viewcode-block" id="babylonian_sqrt">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.math.html#algohub.algorithms.math.arithmetic_algorithms.babylonian_sqrt">[docs]</a>
+<span class="k">def</span> <span class="nf">babylonian_sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the square root of a number using the Babylonian method.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        n (int): The number for which the square root is to be calculated.</span>
+<span class="sd">        accuracy (float): The level of precision for the approximation. Defaults to 0.001.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The approximate square root of the number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">r</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="c1">#     r: float = n  # Declaring r as float</span>
+    <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">r</span> <span class="o">*</span> <span class="n">r</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">accuracy</span><span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="n">n</span> <span class="o">/</span> <span class="n">r</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="binary_exponentiation">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.math.html#algohub.algorithms.math.arithmetic_algorithms.binary_exponentiation">[docs]</a>
+<span class="k">def</span> <span class="nf">binary_exponentiation</span><span class="p">(</span><span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">power</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computes the result of raising a given number to the power using binary exponentiation.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        number (int): The base number.</span>
+<span class="sd">        power (int): The exponent to which the base number is raised.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The result of raising number to the power.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">power</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">power</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">*=</span> <span class="n">number</span>
+        <span class="n">number</span> <span class="o">*=</span> <span class="n">number</span>
+        <span class="n">power</span> <span class="o">//=</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="iterative_factorial">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.math.html#algohub.algorithms.math.arithmetic_algorithms.iterative_factorial">[docs]</a>
+<span class="k">def</span> <span class="nf">iterative_factorial</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the factorial of a non-negative integer using an iterative approach.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        n (int): The non-negative integer for which to calculate the factorial.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The factorial of the integer.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If n is a negative number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The number must be a non-negative integer&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="n">product</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">product</span> <span class="o">*=</span> <span class="n">n</span>
+        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">product</span></div>
+
+
+
+<div class="viewcode-block" id="recursive_factorial">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.math.html#algohub.algorithms.math.arithmetic_algorithms.recursive_factorial">[docs]</a>
+<span class="k">def</span> <span class="nf">recursive_factorial</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the factorial of a non-negative integer using a recursive approach.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        n (int): The non-negative integer for which to calculate the factorial.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The factorial of the integer.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If n is a negative number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The number must be a non-negative integer&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">iterative_factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

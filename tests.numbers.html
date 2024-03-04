@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tests.numbers package &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tests.strings package" href="tests.strings.html" />
+    <link rel="prev" title="tests.math package" href="tests.math.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">algohub</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="algohub.html">algohub package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tests.html">tests package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tests.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html">tests.ciphers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html">tests.math package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">tests.numbers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html">tests.strings package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests.conftest">tests.conftest module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests.test_sorting">tests.test_sorting module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#module-tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">algohub</a></li>
+          <li class="breadcrumb-item"><a href="tests.html">tests package</a></li>
+      <li class="breadcrumb-item active">tests.numbers package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tests.numbers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tests-numbers-package">
+<h1>tests.numbers package<a class="headerlink" href="#tests-numbers-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-tests.numbers.test_digits">
+<span id="tests-numbers-test-digits-module"></span><h2>tests.numbers.test_digits module<a class="headerlink" href="#module-tests.numbers.test_digits" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestGetDigit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_digits.</span></span><span class="sig-name descname"><span class="pre">TestGetDigit</span></span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestGetDigit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestGetDigit" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestGetDigit.test_get_digit">
+<span class="sig-name descname"><span class="pre">test_get_digit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestGetDigit.test_get_digit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestGetDigit.test_get_digit" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestMoveZeroes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_digits.</span></span><span class="sig-name descname"><span class="pre">TestMoveZeroes</span></span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestMoveZeroes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestMoveZeroes" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestMoveZeroes.numbers_and_expected_result_after_moving_zeroes">
+<span class="sig-name descname"><span class="pre">numbers_and_expected_result_after_moving_zeroes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestMoveZeroes.numbers_and_expected_result_after_moving_zeroes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestMoveZeroes.numbers_and_expected_result_after_moving_zeroes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestMoveZeroes.test_move_zeroes">
+<span class="sig-name descname"><span class="pre">test_move_zeroes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers_and_expected_result_after_moving_zeroes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestMoveZeroes.test_move_zeroes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestMoveZeroes.test_move_zeroes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestSumDigits">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_digits.</span></span><span class="sig-name descname"><span class="pre">TestSumDigits</span></span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestSumDigits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestSumDigits" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestSumDigits.number_and_expected_sum">
+<span class="sig-name descname"><span class="pre">number_and_expected_sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestSumDigits.number_and_expected_sum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestSumDigits.number_and_expected_sum" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestSumDigits.test_sum_digits">
+<span class="sig-name descname"><span class="pre">test_sum_digits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_and_expected_sum</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestSumDigits.test_sum_digits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestSumDigits.test_sum_digits" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestValidateLuhn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_digits.</span></span><span class="sig-name descname"><span class="pre">TestValidateLuhn</span></span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestValidateLuhn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestValidateLuhn" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_digits.TestValidateLuhn.test">
+<span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">credit_card_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_digits.html#TestValidateLuhn.test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_digits.TestValidateLuhn.test" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.numbers.test_divisors">
+<span id="tests-numbers-test-divisors-module"></span><h2>tests.numbers.test_divisors module<a class="headerlink" href="#module-tests.numbers.test_divisors" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestCountCommonDivisors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_divisors.</span></span><span class="sig-name descname"><span class="pre">TestCountCommonDivisors</span></span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestCountCommonDivisors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestCountCommonDivisors" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestCountCommonDivisors.test_count_common_divisors">
+<span class="sig-name descname"><span class="pre">test_count_common_divisors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_common_divisors_count</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestCountCommonDivisors.test_count_common_divisors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestCountCommonDivisors.test_count_common_divisors" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestCountDivisors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_divisors.</span></span><span class="sig-name descname"><span class="pre">TestCountDivisors</span></span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestCountDivisors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestCountDivisors" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestCountDivisors.number_and_divisor_count">
+<span class="sig-name descname"><span class="pre">number_and_divisor_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestCountDivisors.number_and_divisor_count"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestCountDivisors.number_and_divisor_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestCountDivisors.test_positive_numbers">
+<span class="sig-name descname"><span class="pre">test_positive_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_and_divisor_count</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestCountDivisors.test_positive_numbers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestCountDivisors.test_positive_numbers" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_divisors.</span></span><span class="sig-name descname"><span class="pre">TestSumDivisors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors.setUp" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors.tearDown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors.tearDown" title="Link to this definition"></a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors.test_negative_numbers_divisors_sum_excluding_number">
+<span class="sig-name descname"><span class="pre">test_negative_numbers_divisors_sum_excluding_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors.test_negative_numbers_divisors_sum_excluding_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors.test_negative_numbers_divisors_sum_excluding_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors.test_negative_numbers_divisors_sum_including_number">
+<span class="sig-name descname"><span class="pre">test_negative_numbers_divisors_sum_including_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors.test_negative_numbers_divisors_sum_including_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors.test_negative_numbers_divisors_sum_including_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors.test_positive_numbers_divisors_sum_excluding_number">
+<span class="sig-name descname"><span class="pre">test_positive_numbers_divisors_sum_excluding_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors.test_positive_numbers_divisors_sum_excluding_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors.test_positive_numbers_divisors_sum_excluding_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors.test_positive_numbers_divisors_sum_including_number">
+<span class="sig-name descname"><span class="pre">test_positive_numbers_divisors_sum_including_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors.test_positive_numbers_divisors_sum_including_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors.test_positive_numbers_divisors_sum_including_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors.test_when_number_equals_zero">
+<span class="sig-name descname"><span class="pre">test_when_number_equals_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors.test_when_number_equals_zero"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors.test_when_number_equals_zero" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_divisors.TestSumDivisors.test_with_special_cases">
+<span class="sig-name descname"><span class="pre">test_with_special_cases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_divisors.html#TestSumDivisors.test_with_special_cases"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_divisors.TestSumDivisors.test_with_special_cases" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.numbers.test_num_base_conversion">
+<span id="tests-numbers-test-num-base-conversion-module"></span><h2>tests.numbers.test_num_base_conversion module<a class="headerlink" href="#module-tests.numbers.test_num_base_conversion" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">TestBinaryHexadecimalConversion</span></span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestBinaryHexadecimalConversion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.conversion_binary_hex_parameters">
+<span class="sig-name descname"><span class="pre">conversion_binary_hex_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestBinaryHexadecimalConversion.conversion_binary_hex_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.conversion_binary_hex_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.test_binary_to_hexadecimal">
+<span class="sig-name descname"><span class="pre">test_binary_to_hexadecimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion_binary_hex_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestBinaryHexadecimalConversion.test_binary_to_hexadecimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.test_binary_to_hexadecimal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.test_hexadecimal_to_binary">
+<span class="sig-name descname"><span class="pre">test_hexadecimal_to_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion_binary_hex_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestBinaryHexadecimalConversion.test_hexadecimal_to_binary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.test_hexadecimal_to_binary" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestBinaryOctalConversion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">TestBinaryOctalConversion</span></span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestBinaryOctalConversion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestBinaryOctalConversion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.conversion_binary_octal_parameters">
+<span class="sig-name descname"><span class="pre">conversion_binary_octal_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestBinaryOctalConversion.conversion_binary_octal_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.conversion_binary_octal_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.test_binary_to_octal">
+<span class="sig-name descname"><span class="pre">test_binary_to_octal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion_binary_octal_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestBinaryOctalConversion.test_binary_to_octal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.test_binary_to_octal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.test_octal_to_binary">
+<span class="sig-name descname"><span class="pre">test_octal_to_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion_binary_octal_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestBinaryOctalConversion.test_octal_to_binary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.test_octal_to_binary" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">TestDecimalBinaryOctalConversion</span></span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalBinaryOctalConversion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.conversion_decimal_any_parameters">
+<span class="sig-name descname"><span class="pre">conversion_decimal_any_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalBinaryOctalConversion.conversion_decimal_any_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.conversion_decimal_any_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_any_to_decimal">
+<span class="sig-name descname"><span class="pre">test_any_to_decimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion_decimal_any_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalBinaryOctalConversion.test_any_to_decimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_any_to_decimal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_any_to_decimal_with_uncorrect_base">
+<span class="sig-name descname"><span class="pre">test_any_to_decimal_with_uncorrect_base</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalBinaryOctalConversion.test_any_to_decimal_with_uncorrect_base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_any_to_decimal_with_uncorrect_base" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_decimal_to_any">
+<span class="sig-name descname"><span class="pre">test_decimal_to_any</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion_decimal_any_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalBinaryOctalConversion.test_decimal_to_any"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_decimal_to_any" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_decimal_to_any_with_uncorrect_base">
+<span class="sig-name descname"><span class="pre">test_decimal_to_any_with_uncorrect_base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalBinaryOctalConversion.test_decimal_to_any_with_uncorrect_base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_decimal_to_any_with_uncorrect_base" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">TestDecimalHexadecimalConversion</span></span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalHexadecimalConversion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.coversion_decimal_hex_parameters">
+<span class="sig-name descname"><span class="pre">coversion_decimal_hex_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalHexadecimalConversion.coversion_decimal_hex_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.coversion_decimal_hex_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.test_decimal_to_hexadecimal">
+<span class="sig-name descname"><span class="pre">test_decimal_to_hexadecimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coversion_decimal_hex_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalHexadecimalConversion.test_decimal_to_hexadecimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.test_decimal_to_hexadecimal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.test_hexadecimal_to_decimal">
+<span class="sig-name descname"><span class="pre">test_hexadecimal_to_decimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coversion_decimal_hex_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestDecimalHexadecimalConversion.test_hexadecimal_to_decimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.test_hexadecimal_to_decimal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_num_base_conversion.</span></span><span class="sig-name descname"><span class="pre">TestOctalHexadecimalConversion</span></span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestOctalHexadecimalConversion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.conversion_octal_hex_parameters">
+<span class="sig-name descname"><span class="pre">conversion_octal_hex_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestOctalHexadecimalConversion.conversion_octal_hex_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.conversion_octal_hex_parameters" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.test_hexadecimal_to_octal">
+<span class="sig-name descname"><span class="pre">test_hexadecimal_to_octal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion_octal_hex_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestOctalHexadecimalConversion.test_hexadecimal_to_octal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.test_hexadecimal_to_octal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.test_octal_to_hexadecimal">
+<span class="sig-name descname"><span class="pre">test_octal_to_hexadecimal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion_octal_hex_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_num_base_conversion.html#TestOctalHexadecimalConversion.test_octal_to_hexadecimal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.test_octal_to_hexadecimal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.numbers.test_primes">
+<span id="tests-numbers-test-primes-module"></span><h2>tests.numbers.test_primes module<a class="headerlink" href="#module-tests.numbers.test_primes" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestErastothenesSieve">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_primes.</span></span><span class="sig-name descname"><span class="pre">TestErastothenesSieve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestErastothenesSieve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestErastothenesSieve" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestErastothenesSieve.setUpClass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setUpClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestErastothenesSieve.setUpClass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestErastothenesSieve.setUpClass" title="Link to this definition"></a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestErastothenesSieve.test_cases">
+<span class="sig-name descname"><span class="pre">test_cases</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[(0,</span> <span class="pre">False),</span> <span class="pre">(1,</span> <span class="pre">False),</span> <span class="pre">(2,</span> <span class="pre">True),</span> <span class="pre">(18,</span> <span class="pre">False),</span> <span class="pre">(41,</span> <span class="pre">True),</span> <span class="pre">(100,</span> <span class="pre">False)]</span></em><a class="headerlink" href="#tests.numbers.test_primes.TestErastothenesSieve.test_cases" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestErastothenesSieve.test_invalid_input_for_sieve_creation">
+<span class="sig-name descname"><span class="pre">test_invalid_input_for_sieve_creation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestErastothenesSieve.test_invalid_input_for_sieve_creation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestErastothenesSieve.test_invalid_input_for_sieve_creation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestErastothenesSieve.test_is_prime">
+<span class="sig-name descname"><span class="pre">test_is_prime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestErastothenesSieve.test_is_prime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestErastothenesSieve.test_is_prime" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestErastothenesSieve.test_is_prime_with_number_out_of_range">
+<span class="sig-name descname"><span class="pre">test_is_prime_with_number_out_of_range</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestErastothenesSieve.test_is_prime_with_number_out_of_range"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestErastothenesSieve.test_is_prime_with_number_out_of_range" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestPrimeFunctions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.numbers.test_primes.</span></span><span class="sig-name descname"><span class="pre">TestPrimeFunctions</span></span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestPrimeFunctions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestPrimeFunctions" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestPrimeFunctions.test_get_prime_factors">
+<span class="sig-name descname"><span class="pre">test_get_prime_factors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_prime_factors</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestPrimeFunctions.test_get_prime_factors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestPrimeFunctions.test_get_prime_factors" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestPrimeFunctions.test_get_prime_factors_with_invalid_input">
+<span class="sig-name descname"><span class="pre">test_get_prime_factors_with_invalid_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestPrimeFunctions.test_get_prime_factors_with_invalid_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestPrimeFunctions.test_get_prime_factors_with_invalid_input" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestPrimeFunctions.test_is_perfect_number">
+<span class="sig-name descname"><span class="pre">test_is_perfect_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestPrimeFunctions.test_is_perfect_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestPrimeFunctions.test_is_perfect_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.numbers.test_primes.TestPrimeFunctions.test_is_prime">
+<span class="sig-name descname"><span class="pre">test_is_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_is_prime</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/numbers/test_primes.html#TestPrimeFunctions.test_is_prime"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.numbers.test_primes.TestPrimeFunctions.test_is_prime" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.numbers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests.numbers" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tests.math.html" class="btn btn-neutral float-left" title="tests.math package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tests.strings.html" class="btn btn-neutral float-right" title="tests.strings package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

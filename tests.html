@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tests package &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tests.ciphers package" href="tests.ciphers.html" />
+    <link rel="prev" title="algohub.data package" href="algohub.data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">algohub</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="algohub.html">algohub package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">tests package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html">tests.ciphers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html">tests.math package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html">tests.numbers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html">tests.strings package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tests.conftest">tests.conftest module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tests.conftest.ge_0_number_and_expected_factorial_result"><code class="docutils literal notranslate"><span class="pre">ge_0_number_and_expected_factorial_result()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tests.conftest.items_and_expected_sorted_items"><code class="docutils literal notranslate"><span class="pre">items_and_expected_sorted_items()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tests.conftest.palindrome_and_potential_palindrome"><code class="docutils literal notranslate"><span class="pre">palindrome_and_potential_palindrome()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tests.test_sorting">tests.test_sorting module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tests.test_sorting.TestSortingAlgorithms"><code class="docutils literal notranslate"><span class="pre">TestSortingAlgorithms</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tests.test_sorting.TestSortingManager"><code class="docutils literal notranslate"><span class="pre">TestSortingManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">algohub</a></li>
+      <li class="breadcrumb-item active">tests package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tests.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tests-package">
+<h1>tests package<a class="headerlink" href="#tests-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tests.ciphers.html">tests.ciphers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.ciphers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.ciphers.html#module-tests.ciphers.test_caesar">tests.ciphers.test_caesar module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithCustomShift"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithCustomShift</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithCustomShift.test_cases"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithCustomShift.test_cases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithCustomShift.test_decrypt"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithCustomShift.test_decrypt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithCustomShift.test_encypt"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithCustomShift.test_encypt()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithDefaultShift"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithDefaultShift</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithDefaultShift.setUpClass"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithDefaultShift.setUpClass()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithDefaultShift.test_cases"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithDefaultShift.test_cases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithDefaultShift.test_decrypt"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithDefaultShift.test_decrypt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_caesar.TestCaesarWithDefaultShift.test_encrypt"><code class="docutils literal notranslate"><span class="pre">TestCaesarWithDefaultShift.test_encrypt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.ciphers.html#module-tests.ciphers.test_morse">tests.ciphers.test_morse module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_morse.TestMorse"><code class="docutils literal notranslate"><span class="pre">TestMorse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_morse.TestMorse.morse_encoded_text"><code class="docutils literal notranslate"><span class="pre">TestMorse.morse_encoded_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_morse.TestMorse.test_decrypt"><code class="docutils literal notranslate"><span class="pre">TestMorse.test_decrypt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_morse.TestMorse.test_encrypt"><code class="docutils literal notranslate"><span class="pre">TestMorse.test_encrypt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.ciphers.html#module-tests.ciphers.test_vigenere">tests.ciphers.test_vigenere module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithCustomKey2"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithCustomKey2</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithCustomKey2.test_cases"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithCustomKey2.test_cases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithCustomKey2.test_decrypt"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithCustomKey2.test_decrypt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithCustomKey2.test_encrypt"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithCustomKey2.test_encrypt()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithDefaultKey2"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithDefaultKey2</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithDefaultKey2.setUpClass"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithDefaultKey2.setUpClass()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithDefaultKey2.test_cases"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithDefaultKey2.test_cases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithDefaultKey2.test_decrypt"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithDefaultKey2.test_decrypt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.ciphers.html#tests.ciphers.test_vigenere.TestVigenereWithDefaultKey2.test_encrypt"><code class="docutils literal notranslate"><span class="pre">TestVigenereWithDefaultKey2.test_encrypt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.ciphers.html#module-tests.ciphers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.math.html">tests.math package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.math.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.math.html#module-tests.math.test_arithmetic_algorithms">tests.math.test_arithmetic_algorithms module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBabylonianSqrt"><code class="docutils literal notranslate"><span class="pre">TestBabylonianSqrt</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBabylonianSqrt.number_accuracy_and_expected_sqrt_result"><code class="docutils literal notranslate"><span class="pre">TestBabylonianSqrt.number_accuracy_and_expected_sqrt_result()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBabylonianSqrt.number_and_expected_sqrt_result_with_default_accuracy"><code class="docutils literal notranslate"><span class="pre">TestBabylonianSqrt.number_and_expected_sqrt_result_with_default_accuracy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBabylonianSqrt.test_with_custom_accuracy"><code class="docutils literal notranslate"><span class="pre">TestBabylonianSqrt.test_with_custom_accuracy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBabylonianSqrt.test_with_default_accuracy"><code class="docutils literal notranslate"><span class="pre">TestBabylonianSqrt.test_with_default_accuracy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBinaryExponentiation"><code class="docutils literal notranslate"><span class="pre">TestBinaryExponentiation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBinaryExponentiation.test_binary_exponentiation"><code class="docutils literal notranslate"><span class="pre">TestBinaryExponentiation.test_binary_exponentiation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBinarySearch"><code class="docutils literal notranslate"><span class="pre">TestBinarySearch</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestBinarySearch.test_binary_search"><code class="docutils literal notranslate"><span class="pre">TestBinarySearch.test_binary_search()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestFactorials"><code class="docutils literal notranslate"><span class="pre">TestFactorials</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestFactorials.test_iterative_with_ge_0_number"><code class="docutils literal notranslate"><span class="pre">TestFactorials.test_iterative_with_ge_0_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestFactorials.test_iterative_with_negative_number"><code class="docutils literal notranslate"><span class="pre">TestFactorials.test_iterative_with_negative_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestFactorials.test_recursive_with_ge_0_number"><code class="docutils literal notranslate"><span class="pre">TestFactorials.test_recursive_with_ge_0_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_arithmetic_algorithms.TestFactorials.test_recursive_with_negative_number"><code class="docutils literal notranslate"><span class="pre">TestFactorials.test_recursive_with_negative_number()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.math.html#module-tests.math.test_function_algorithms">tests.math.test_function_algorithms module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestBisectionRootFinder"><code class="docutils literal notranslate"><span class="pre">TestBisectionRootFinder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestBisectionRootFinder.linear_fn"><code class="docutils literal notranslate"><span class="pre">TestBisectionRootFinder.linear_fn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestBisectionRootFinder.polynomial"><code class="docutils literal notranslate"><span class="pre">TestBisectionRootFinder.polynomial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestBisectionRootFinder.quadratic_fn"><code class="docutils literal notranslate"><span class="pre">TestBisectionRootFinder.quadratic_fn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestBisectionRootFinder.test_cases"><code class="docutils literal notranslate"><span class="pre">TestBisectionRootFinder.test_cases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestBisectionRootFinder.test_when_not_correct"><code class="docutils literal notranslate"><span class="pre">TestBisectionRootFinder.test_when_not_correct()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestBisectionRootFinder.test_with_correct_data"><code class="docutils literal notranslate"><span class="pre">TestBisectionRootFinder.test_with_correct_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestHornerEvaluation"><code class="docutils literal notranslate"><span class="pre">TestHornerEvaluation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestHornerEvaluation.test_various_cases"><code class="docutils literal notranslate"><span class="pre">TestHornerEvaluation.test_various_cases()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestIntegration"><code class="docutils literal notranslate"><span class="pre">TestIntegration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestIntegration.linear_fn"><code class="docutils literal notranslate"><span class="pre">TestIntegration.linear_fn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestIntegration.polynomial_fn"><code class="docutils literal notranslate"><span class="pre">TestIntegration.polynomial_fn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestIntegration.quadratic_fn"><code class="docutils literal notranslate"><span class="pre">TestIntegration.quadratic_fn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestIntegration.test_cases_rectangular_integration"><code class="docutils literal notranslate"><span class="pre">TestIntegration.test_cases_rectangular_integration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestIntegration.test_cases_trapezoidal_integration"><code class="docutils literal notranslate"><span class="pre">TestIntegration.test_cases_trapezoidal_integration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestIntegration.test_rectangular_integration"><code class="docutils literal notranslate"><span class="pre">TestIntegration.test_rectangular_integration()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestIntegration.test_trapezoidal_integration"><code class="docutils literal notranslate"><span class="pre">TestIntegration.test_trapezoidal_integration()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestQuadraticRootsFinder"><code class="docutils literal notranslate"><span class="pre">TestQuadraticRootsFinder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestQuadraticRootsFinder.test_correct_roots_calculation"><code class="docutils literal notranslate"><span class="pre">TestQuadraticRootsFinder.test_correct_roots_calculation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_function_algorithms.TestQuadraticRootsFinder.test_when_a_coefficient_equals_0"><code class="docutils literal notranslate"><span class="pre">TestQuadraticRootsFinder.test_when_a_coefficient_equals_0()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.math.html#module-tests.math.test_geometric_algorithms">tests.math.test_geometric_algorithms module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_geometric_algorithms.TestPointsGeometryTester"><code class="docutils literal notranslate"><span class="pre">TestPointsGeometryTester</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_geometric_algorithms.TestPointsGeometryTester.test_are_points_collinear"><code class="docutils literal notranslate"><span class="pre">TestPointsGeometryTester.test_are_points_collinear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_geometric_algorithms.TestPointsGeometryTester.test_calculate_distance_between_points"><code class="docutils literal notranslate"><span class="pre">TestPointsGeometryTester.test_calculate_distance_between_points()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.math.html#tests.math.test_geometric_algorithms.TestTriangleProperties"><code class="docutils literal notranslate"><span class="pre">TestTriangleProperties</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_geometric_algorithms.TestTriangleProperties.test_is_triangle_rectangular"><code class="docutils literal notranslate"><span class="pre">TestTriangleProperties.test_is_triangle_rectangular()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.math.html#tests.math.test_geometric_algorithms.TestTriangleProperties.test_is_triangle_valid"><code class="docutils literal notranslate"><span class="pre">TestTriangleProperties.test_is_triangle_valid()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.math.html#module-tests.math">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.numbers.html">tests.numbers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.numbers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.numbers.html#module-tests.numbers.test_digits">tests.numbers.test_digits module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestGetDigit"><code class="docutils literal notranslate"><span class="pre">TestGetDigit</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestGetDigit.test_get_digit"><code class="docutils literal notranslate"><span class="pre">TestGetDigit.test_get_digit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestMoveZeroes"><code class="docutils literal notranslate"><span class="pre">TestMoveZeroes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestMoveZeroes.numbers_and_expected_result_after_moving_zeroes"><code class="docutils literal notranslate"><span class="pre">TestMoveZeroes.numbers_and_expected_result_after_moving_zeroes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestMoveZeroes.test_move_zeroes"><code class="docutils literal notranslate"><span class="pre">TestMoveZeroes.test_move_zeroes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestSumDigits"><code class="docutils literal notranslate"><span class="pre">TestSumDigits</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestSumDigits.number_and_expected_sum"><code class="docutils literal notranslate"><span class="pre">TestSumDigits.number_and_expected_sum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestSumDigits.test_sum_digits"><code class="docutils literal notranslate"><span class="pre">TestSumDigits.test_sum_digits()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestValidateLuhn"><code class="docutils literal notranslate"><span class="pre">TestValidateLuhn</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_digits.TestValidateLuhn.test"><code class="docutils literal notranslate"><span class="pre">TestValidateLuhn.test()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.numbers.html#module-tests.numbers.test_divisors">tests.numbers.test_divisors module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestCountCommonDivisors"><code class="docutils literal notranslate"><span class="pre">TestCountCommonDivisors</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestCountCommonDivisors.test_count_common_divisors"><code class="docutils literal notranslate"><span class="pre">TestCountCommonDivisors.test_count_common_divisors()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestCountDivisors"><code class="docutils literal notranslate"><span class="pre">TestCountDivisors</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestCountDivisors.number_and_divisor_count"><code class="docutils literal notranslate"><span class="pre">TestCountDivisors.number_and_divisor_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestCountDivisors.test_positive_numbers"><code class="docutils literal notranslate"><span class="pre">TestCountDivisors.test_positive_numbers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors.setUp"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors.tearDown"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors.tearDown()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors.test_negative_numbers_divisors_sum_excluding_number"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors.test_negative_numbers_divisors_sum_excluding_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors.test_negative_numbers_divisors_sum_including_number"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors.test_negative_numbers_divisors_sum_including_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors.test_positive_numbers_divisors_sum_excluding_number"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors.test_positive_numbers_divisors_sum_excluding_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors.test_positive_numbers_divisors_sum_including_number"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors.test_positive_numbers_divisors_sum_including_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors.test_when_number_equals_zero"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors.test_when_number_equals_zero()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_divisors.TestSumDivisors.test_with_special_cases"><code class="docutils literal notranslate"><span class="pre">TestSumDivisors.test_with_special_cases()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.numbers.html#module-tests.numbers.test_num_base_conversion">tests.numbers.test_num_base_conversion module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion"><code class="docutils literal notranslate"><span class="pre">TestBinaryHexadecimalConversion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.conversion_binary_hex_parameters"><code class="docutils literal notranslate"><span class="pre">TestBinaryHexadecimalConversion.conversion_binary_hex_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.test_binary_to_hexadecimal"><code class="docutils literal notranslate"><span class="pre">TestBinaryHexadecimalConversion.test_binary_to_hexadecimal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestBinaryHexadecimalConversion.test_hexadecimal_to_binary"><code class="docutils literal notranslate"><span class="pre">TestBinaryHexadecimalConversion.test_hexadecimal_to_binary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestBinaryOctalConversion"><code class="docutils literal notranslate"><span class="pre">TestBinaryOctalConversion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.conversion_binary_octal_parameters"><code class="docutils literal notranslate"><span class="pre">TestBinaryOctalConversion.conversion_binary_octal_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.test_binary_to_octal"><code class="docutils literal notranslate"><span class="pre">TestBinaryOctalConversion.test_binary_to_octal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestBinaryOctalConversion.test_octal_to_binary"><code class="docutils literal notranslate"><span class="pre">TestBinaryOctalConversion.test_octal_to_binary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion"><code class="docutils literal notranslate"><span class="pre">TestDecimalBinaryOctalConversion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.conversion_decimal_any_parameters"><code class="docutils literal notranslate"><span class="pre">TestDecimalBinaryOctalConversion.conversion_decimal_any_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_any_to_decimal"><code class="docutils literal notranslate"><span class="pre">TestDecimalBinaryOctalConversion.test_any_to_decimal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_any_to_decimal_with_uncorrect_base"><code class="docutils literal notranslate"><span class="pre">TestDecimalBinaryOctalConversion.test_any_to_decimal_with_uncorrect_base()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_decimal_to_any"><code class="docutils literal notranslate"><span class="pre">TestDecimalBinaryOctalConversion.test_decimal_to_any()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalBinaryOctalConversion.test_decimal_to_any_with_uncorrect_base"><code class="docutils literal notranslate"><span class="pre">TestDecimalBinaryOctalConversion.test_decimal_to_any_with_uncorrect_base()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion"><code class="docutils literal notranslate"><span class="pre">TestDecimalHexadecimalConversion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.coversion_decimal_hex_parameters"><code class="docutils literal notranslate"><span class="pre">TestDecimalHexadecimalConversion.coversion_decimal_hex_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.test_decimal_to_hexadecimal"><code class="docutils literal notranslate"><span class="pre">TestDecimalHexadecimalConversion.test_decimal_to_hexadecimal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestDecimalHexadecimalConversion.test_hexadecimal_to_decimal"><code class="docutils literal notranslate"><span class="pre">TestDecimalHexadecimalConversion.test_hexadecimal_to_decimal()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion"><code class="docutils literal notranslate"><span class="pre">TestOctalHexadecimalConversion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.conversion_octal_hex_parameters"><code class="docutils literal notranslate"><span class="pre">TestOctalHexadecimalConversion.conversion_octal_hex_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.test_hexadecimal_to_octal"><code class="docutils literal notranslate"><span class="pre">TestOctalHexadecimalConversion.test_hexadecimal_to_octal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_num_base_conversion.TestOctalHexadecimalConversion.test_octal_to_hexadecimal"><code class="docutils literal notranslate"><span class="pre">TestOctalHexadecimalConversion.test_octal_to_hexadecimal()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.numbers.html#module-tests.numbers.test_primes">tests.numbers.test_primes module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestErastothenesSieve"><code class="docutils literal notranslate"><span class="pre">TestErastothenesSieve</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestErastothenesSieve.setUpClass"><code class="docutils literal notranslate"><span class="pre">TestErastothenesSieve.setUpClass()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestErastothenesSieve.test_cases"><code class="docutils literal notranslate"><span class="pre">TestErastothenesSieve.test_cases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestErastothenesSieve.test_invalid_input_for_sieve_creation"><code class="docutils literal notranslate"><span class="pre">TestErastothenesSieve.test_invalid_input_for_sieve_creation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestErastothenesSieve.test_is_prime"><code class="docutils literal notranslate"><span class="pre">TestErastothenesSieve.test_is_prime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestErastothenesSieve.test_is_prime_with_number_out_of_range"><code class="docutils literal notranslate"><span class="pre">TestErastothenesSieve.test_is_prime_with_number_out_of_range()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestPrimeFunctions"><code class="docutils literal notranslate"><span class="pre">TestPrimeFunctions</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestPrimeFunctions.test_get_prime_factors"><code class="docutils literal notranslate"><span class="pre">TestPrimeFunctions.test_get_prime_factors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestPrimeFunctions.test_get_prime_factors_with_invalid_input"><code class="docutils literal notranslate"><span class="pre">TestPrimeFunctions.test_get_prime_factors_with_invalid_input()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestPrimeFunctions.test_is_perfect_number"><code class="docutils literal notranslate"><span class="pre">TestPrimeFunctions.test_is_perfect_number()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.numbers.html#tests.numbers.test_primes.TestPrimeFunctions.test_is_prime"><code class="docutils literal notranslate"><span class="pre">TestPrimeFunctions.test_is_prime()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.numbers.html#module-tests.numbers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.strings.html">tests.strings package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.strings.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.strings.html#module-tests.strings.test_custom_string_sorting">tests.strings.test_custom_string_sorting module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_custom_string_sorting.TestSortItems"><code class="docutils literal notranslate"><span class="pre">TestSortItems</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_custom_string_sorting.TestSortItems.test_sort_items_with_compare_vowels_count_fn"><code class="docutils literal notranslate"><span class="pre">TestSortItems.test_sort_items_with_compare_vowels_count_fn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_custom_string_sorting.TestSortItems.test_with_compare_chars_sum_fn"><code class="docutils literal notranslate"><span class="pre">TestSortItems.test_with_compare_chars_sum_fn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.strings.html#module-tests.strings.test_string_analysis">tests.strings.test_string_analysis module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates"><code class="docutils literal notranslate"><span class="pre">TestContainsDuplicates</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates.duplicate_elements"><code class="docutils literal notranslate"><span class="pre">TestContainsDuplicates.duplicate_elements()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates.test_with_duplicates"><code class="docutils literal notranslate"><span class="pre">TestContainsDuplicates.test_with_duplicates()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates.test_with_unique_elements"><code class="docutils literal notranslate"><span class="pre">TestContainsDuplicates.test_with_unique_elements()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates.unique_elements"><code class="docutils literal notranslate"><span class="pre">TestContainsDuplicates.unique_elements()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestCountSubstringOccurences"><code class="docutils literal notranslate"><span class="pre">TestCountSubstringOccurences</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestCountSubstringOccurences.test_substring_occurences"><code class="docutils literal notranslate"><span class="pre">TestCountSubstringOccurences.test_substring_occurences()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestIsAnagram"><code class="docutils literal notranslate"><span class="pre">TestIsAnagram</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestIsAnagram.test_cases"><code class="docutils literal notranslate"><span class="pre">TestIsAnagram.test_cases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestIsAnagram.test_is_anagram"><code class="docutils literal notranslate"><span class="pre">TestIsAnagram.test_is_anagram()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestIsPangram"><code class="docutils literal notranslate"><span class="pre">TestIsPangram</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestIsPangram.test_is_pangram"><code class="docutils literal notranslate"><span class="pre">TestIsPangram.test_is_pangram()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestPalindromeFunctions"><code class="docutils literal notranslate"><span class="pre">TestPalindromeFunctions</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestPalindromeFunctions.test_palindrome_and_potential_palindrome"><code class="docutils literal notranslate"><span class="pre">TestPalindromeFunctions.test_palindrome_and_potential_palindrome()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestPalindromeFunctions.test_potential_palindrome_but_not_actual_palindrome"><code class="docutils literal notranslate"><span class="pre">TestPalindromeFunctions.test_potential_palindrome_but_not_actual_palindrome()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring"><code class="docutils literal notranslate"><span class="pre">TestSubsequenceAndSubstring</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring.test_is_subsequence"><code class="docutils literal notranslate"><span class="pre">TestSubsequenceAndSubstring.test_is_subsequence()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring.test_is_substring"><code class="docutils literal notranslate"><span class="pre">TestSubsequenceAndSubstring.test_is_substring()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring.text_potential_subsequence_and_result"><code class="docutils literal notranslate"><span class="pre">TestSubsequenceAndSubstring.text_potential_subsequence_and_result()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring.text_potential_substring_and_result"><code class="docutils literal notranslate"><span class="pre">TestSubsequenceAndSubstring.text_potential_substring_and_result()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.strings.html#module-tests.strings.test_string_manipulation">tests.strings.test_string_manipulation module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestCompression"><code class="docutils literal notranslate"><span class="pre">TestCompression</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestCompression.test_string_compression"><code class="docutils literal notranslate"><span class="pre">TestCompression.test_string_compression()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestCustomJoin"><code class="docutils literal notranslate"><span class="pre">TestCustomJoin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestCustomJoin.test_when_any_element_is_not_string"><code class="docutils literal notranslate"><span class="pre">TestCustomJoin.test_when_any_element_is_not_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestCustomJoin.test_with_valid_data"><code class="docutils literal notranslate"><span class="pre">TestCustomJoin.test_with_valid_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestCustomJoin.words_and_separator_fixture"><code class="docutils literal notranslate"><span class="pre">TestCustomJoin.words_and_separator_fixture()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestLowerAndUpper"><code class="docutils literal notranslate"><span class="pre">TestLowerAndUpper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestLowerAndUpper.test_lower"><code class="docutils literal notranslate"><span class="pre">TestLowerAndUpper.test_lower()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestLowerAndUpper.test_upper"><code class="docutils literal notranslate"><span class="pre">TestLowerAndUpper.test_upper()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestReverse"><code class="docutils literal notranslate"><span class="pre">TestReverse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestReverse.test_reverse_string"><code class="docutils literal notranslate"><span class="pre">TestReverse.test_reverse_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tests.strings.html#tests.strings.test_string_manipulation.TestReverse.words_for_reversal"><code class="docutils literal notranslate"><span class="pre">TestReverse.words_for_reversal</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.strings.html#module-tests.strings">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-tests.conftest">
+<span id="tests-conftest-module"></span><h2>tests.conftest module<a class="headerlink" href="#module-tests.conftest" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.conftest.ge_0_number_and_expected_factorial_result">
+<span class="sig-prename descclassname"><span class="pre">tests.conftest.</span></span><span class="sig-name descname"><span class="pre">ge_0_number_and_expected_factorial_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/conftest.html#ge_0_number_and_expected_factorial_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.conftest.ge_0_number_and_expected_factorial_result" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.conftest.items_and_expected_sorted_items">
+<span class="sig-prename descclassname"><span class="pre">tests.conftest.</span></span><span class="sig-name descname"><span class="pre">items_and_expected_sorted_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/conftest.html#items_and_expected_sorted_items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.conftest.items_and_expected_sorted_items" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.conftest.palindrome_and_potential_palindrome">
+<span class="sig-prename descclassname"><span class="pre">tests.conftest.</span></span><span class="sig-name descname"><span class="pre">palindrome_and_potential_palindrome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/conftest.html#palindrome_and_potential_palindrome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.conftest.palindrome_and_potential_palindrome" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-tests.test_sorting">
+<span id="tests-test-sorting-module"></span><h2>tests.test_sorting module<a class="headerlink" href="#module-tests.test_sorting" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_sorting.TestSortingAlgorithms">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_sorting.</span></span><span class="sig-name descname"><span class="pre">TestSortingAlgorithms</span></span><a class="reference internal" href="_modules/tests/test_sorting.html#TestSortingAlgorithms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_sorting.TestSortingAlgorithms" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_sorting.TestSortingAlgorithms.test_sorting">
+<span class="sig-name descname"><span class="pre">test_sorting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sorting_algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">items_and_expected_sorted_items</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_sorting.html#TestSortingAlgorithms.test_sorting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_sorting.TestSortingAlgorithms.test_sorting" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_sorting.TestSortingManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_sorting.</span></span><span class="sig-name descname"><span class="pre">TestSortingManager</span></span><a class="reference internal" href="_modules/tests/test_sorting.html#TestSortingManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_sorting.TestSortingManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_sorting.TestSortingManager.test_perform_sorting">
+<span class="sig-name descname"><span class="pre">test_perform_sorting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items_and_expected_sorted_items</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_sorting.html#TestSortingManager.test_perform_sorting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_sorting.TestSortingManager.test_perform_sorting" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_sorting.TestSortingManager.test_set_sorting_strategy">
+<span class="sig-name descname"><span class="pre">test_set_sorting_strategy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_sorting.html#TestSortingManager.test_set_sorting_strategy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_sorting.TestSortingManager.test_set_sorting_strategy" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="algohub.data.html" class="btn btn-neutral float-left" title="algohub.data package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tests.ciphers.html" class="btn btn-neutral float-right" title="tests.ciphers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

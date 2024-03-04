@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tests.math.test_geometric_algorithms &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../docs/_build/html/_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../docs/_build/html/_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../docs/_build/html/_static/doctools.js?v=888ff710"></script>
+        <script src="../../../docs/_build/html/_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../docs/_build/html/_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../docs/_build/html/index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../docs/_build/html/index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tests.math.test_geometric_algorithms</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tests.math.test_geometric_algorithms</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">from</span> <span class="nn">algohub.algorithms.math.geometric_algorithms</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Point</span><span class="p">,</span>
+    <span class="n">distance_between_points</span><span class="p">,</span>
+    <span class="n">are_points_collinear</span><span class="p">,</span>
+    <span class="n">is_triangle_valid</span><span class="p">,</span>
+    <span class="n">is_triangle_rectangular</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="TestPointsGeometryTester">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.math.html#tests.math.test_geometric_algorithms.TestPointsGeometryTester">[docs]</a>
+<span class="k">class</span> <span class="nc">TestPointsGeometryTester</span><span class="p">:</span>
+<div class="viewcode-block" id="TestPointsGeometryTester.test_calculate_distance_between_points">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.math.html#tests.math.test_geometric_algorithms.TestPointsGeometryTester.test_calculate_distance_between_points">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;p1, p2, expected_distance&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mf">4.0</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="mf">5.0</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mf">5.0</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mf">3.7</span><span class="p">,</span> <span class="mf">4.9</span><span class="p">),</span> <span class="mf">3.26</span><span class="p">)</span>
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_calculate_distance_between_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">expected_distance</span><span class="p">):</span>
+        <span class="n">distance</span> <span class="o">=</span> <span class="n">distance_between_points</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">distance</span> <span class="o">==</span> <span class="n">expected_distance</span></div>
+
+
+<div class="viewcode-block" id="TestPointsGeometryTester.test_are_points_collinear">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.math.html#tests.math.test_geometric_algorithms.TestPointsGeometryTester.test_are_points_collinear">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;p1, p2,p3, expected_collinearity&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mf">5.25</span><span class="p">,</span> <span class="mf">11.5</span><span class="p">),</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Point</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">210</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">610</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">1010</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_are_points_collinear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">,</span> <span class="n">expected_collinearity</span><span class="p">):</span>
+        <span class="n">collinearity</span> <span class="o">=</span> <span class="n">are_points_collinear</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">collinearity</span> <span class="o">==</span> <span class="n">expected_collinearity</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestTriangleProperties">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.math.html#tests.math.test_geometric_algorithms.TestTriangleProperties">[docs]</a>
+<span class="k">class</span> <span class="nc">TestTriangleProperties</span><span class="p">:</span>
+<div class="viewcode-block" id="TestTriangleProperties.test_is_triangle_valid">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.math.html#tests.math.test_geometric_algorithms.TestTriangleProperties.test_is_triangle_valid">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;s1, s2, s3, expected_result&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_is_triangle_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">):</span>
+        <span class="n">validity</span> <span class="o">=</span> <span class="n">is_triangle_valid</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">validity</span> <span class="o">==</span> <span class="n">expected_result</span></div>
+
+
+<div class="viewcode-block" id="TestTriangleProperties.test_is_triangle_rectangular">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.math.html#tests.math.test_geometric_algorithms.TestTriangleProperties.test_is_triangle_rectangular">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;s1, s2, s3, expected_result&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_is_triangle_rectangular</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">):</span>
+        <span class="n">is_rectangular</span> <span class="o">=</span> <span class="n">is_triangle_rectangular</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">is_rectangular</span> <span class="o">==</span> <span class="n">expected_result</span></div>
+</div>
+
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

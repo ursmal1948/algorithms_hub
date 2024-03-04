@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tests.strings.test_string_analysis &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../docs/_build/html/_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../docs/_build/html/_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../docs/_build/html/_static/doctools.js?v=888ff710"></script>
+        <script src="../../../docs/_build/html/_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../docs/_build/html/_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../docs/_build/html/index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../docs/_build/html/index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tests.strings.test_string_analysis</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tests.strings.test_string_analysis</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">from</span> <span class="nn">algohub.algorithms.strings.string_analysis</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">is_anagram</span><span class="p">,</span>
+    <span class="n">is_pangram</span><span class="p">,</span>
+    <span class="n">is_palindrome</span><span class="p">,</span>
+    <span class="n">is_potential_palindrome</span><span class="p">,</span>
+    <span class="n">count_substring_occurences</span><span class="p">,</span>
+    <span class="n">is_substring</span><span class="p">,</span>
+    <span class="n">is_subsequence</span><span class="p">,</span>
+    <span class="n">contains_duplicates</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">..conftest</span> <span class="kn">import</span> <span class="n">palindrome_and_potential_palindrome</span>
+
+
+<div class="viewcode-block" id="TestIsAnagram">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestIsAnagram">[docs]</a>
+<span class="k">class</span> <span class="nc">TestIsAnagram</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;meat&#39;</span><span class="p">,</span> <span class="s1">&#39;team&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;saw&#39;</span><span class="p">,</span> <span class="s1">&#39;sam&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="p">]</span>
+
+<div class="viewcode-block" id="TestIsAnagram.test_is_anagram">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestIsAnagram.test_is_anagram">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_is_anagram</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="n">TestIsAnagram</span><span class="o">.</span><span class="n">test_cases</span><span class="p">:</span>
+            <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">subTest</span><span class="p">(</span><span class="n">test_case</span><span class="o">=</span><span class="n">test_case</span><span class="p">):</span>
+                <span class="n">text1</span><span class="p">,</span> <span class="n">text2</span><span class="p">,</span> <span class="n">expected_result</span> <span class="o">=</span> <span class="n">test_case</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">is_anagram</span><span class="p">(</span><span class="n">text1</span><span class="p">,</span> <span class="n">text2</span><span class="p">),</span> <span class="n">expected_result</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestIsPangram">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestIsPangram">[docs]</a>
+<span class="k">class</span> <span class="nc">TestIsPangram</span><span class="p">:</span>
+<div class="viewcode-block" id="TestIsPangram.test_is_pangram">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestIsPangram.test_is_pangram">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;text, expected_result&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;abcde12&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;The quick brown fox jumps over the lazy dog!&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_is_pangram</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">is_pangram</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestPalindromeFunctions">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestPalindromeFunctions">[docs]</a>
+<span class="k">class</span> <span class="nc">TestPalindromeFunctions</span><span class="p">:</span>
+<div class="viewcode-block" id="TestPalindromeFunctions.test_palindrome_and_potential_palindrome">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestPalindromeFunctions.test_palindrome_and_potential_palindrome">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_palindrome_and_potential_palindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">palindrome_and_potential_palindrome</span><span class="p">):</span>
+        <span class="n">text</span><span class="p">,</span> <span class="n">expected_result</span> <span class="o">=</span> <span class="n">palindrome_and_potential_palindrome</span>
+        <span class="k">assert</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span>
+        <span class="k">assert</span> <span class="n">is_potential_palindrome</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_result</span></div>
+
+
+<div class="viewcode-block" id="TestPalindromeFunctions.test_potential_palindrome_but_not_actual_palindrome">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestPalindromeFunctions.test_potential_palindrome_but_not_actual_palindrome">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_potential_palindrome_but_not_actual_palindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="ow">not</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="s1">&#39;batat&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">is_potential_palindrome</span><span class="p">(</span><span class="s1">&#39;batat&#39;</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestSubsequenceAndSubstring">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring">[docs]</a>
+<span class="k">class</span> <span class="nc">TestSubsequenceAndSubstring</span><span class="p">:</span>
+<div class="viewcode-block" id="TestSubsequenceAndSubstring.text_potential_subsequence_and_result">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring.text_potential_subsequence_and_result">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">([</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;el&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;ho&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">],</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">)])</span>
+    <span class="k">def</span> <span class="nf">text_potential_subsequence_and_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span></div>
+
+
+<div class="viewcode-block" id="TestSubsequenceAndSubstring.test_is_subsequence">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring.test_is_subsequence">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_is_subsequence</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text_potential_subsequence_and_result</span><span class="p">):</span>
+        <span class="n">sequence_pair</span><span class="p">,</span> <span class="n">result</span> <span class="o">=</span> <span class="n">text_potential_subsequence_and_result</span>
+        <span class="k">assert</span> <span class="n">is_subsequence</span><span class="p">(</span><span class="n">sequence_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sequence_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="TestSubsequenceAndSubstring.text_potential_substring_and_result">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring.text_potential_substring_and_result">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">([</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;garden&#39;</span><span class="p">,</span> <span class="s1">&#39;gar&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;garden&#39;</span><span class="p">,</span> <span class="s1">&#39;gdn&#39;</span><span class="p">],</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;garden&#39;</span><span class="p">,</span> <span class="s1">&#39;den&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">],</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">text_potential_substring_and_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span></div>
+
+
+<div class="viewcode-block" id="TestSubsequenceAndSubstring.test_is_substring">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestSubsequenceAndSubstring.test_is_substring">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_is_substring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text_potential_substring_and_result</span><span class="p">):</span>
+        <span class="n">sequence_pair</span><span class="p">,</span> <span class="n">result</span> <span class="o">=</span> <span class="n">text_potential_substring_and_result</span>
+        <span class="k">assert</span> <span class="n">is_substring</span><span class="p">(</span><span class="n">sequence_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sequence_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="n">result</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestCountSubstringOccurences">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestCountSubstringOccurences">[docs]</a>
+<span class="k">class</span> <span class="nc">TestCountSubstringOccurences</span><span class="p">:</span>
+<div class="viewcode-block" id="TestCountSubstringOccurences.test_substring_occurences">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestCountSubstringOccurences.test_substring_occurences">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;text, substring, expected_count&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;abDababab&#39;</span><span class="p">,</span> <span class="s1">&#39;ab&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;garden garden&#39;</span><span class="p">,</span> <span class="s1">&#39;ard&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_substring_occurences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">substring</span><span class="p">,</span> <span class="n">expected_count</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">count_substring_occurences</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">substring</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_count</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestContainsDuplicates">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates">[docs]</a>
+<span class="k">class</span> <span class="nc">TestContainsDuplicates</span><span class="p">:</span>
+<div class="viewcode-block" id="TestContainsDuplicates.unique_elements">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates.unique_elements">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]])</span>
+    <span class="k">def</span> <span class="nf">unique_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span></div>
+
+
+<div class="viewcode-block" id="TestContainsDuplicates.duplicate_elements">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates.duplicate_elements">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]])</span>
+    <span class="k">def</span> <span class="nf">duplicate_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span></div>
+
+
+<div class="viewcode-block" id="TestContainsDuplicates.test_with_unique_elements">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates.test_with_unique_elements">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_with_unique_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">unique_elements</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="ow">not</span> <span class="n">contains_duplicates</span><span class="p">(</span><span class="n">unique_elements</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TestContainsDuplicates.test_with_duplicates">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_analysis.TestContainsDuplicates.test_with_duplicates">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_with_duplicates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duplicate_elements</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">contains_duplicates</span><span class="p">(</span><span class="n">duplicate_elements</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

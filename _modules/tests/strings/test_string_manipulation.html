@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tests.strings.test_string_manipulation &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../docs/_build/html/_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../docs/_build/html/_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../docs/_build/html/_static/doctools.js?v=888ff710"></script>
+        <script src="../../../docs/_build/html/_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../docs/_build/html/_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../docs/_build/html/index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../docs/_build/html/index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">tests.strings.test_string_manipulation</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for tests.strings.test_string_manipulation</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">algohub.algorithms.strings.string_manipulation</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">reverse</span><span class="p">,</span>
+    <span class="n">compress</span><span class="p">,</span>
+    <span class="n">custom_join</span><span class="p">,</span>
+    <span class="n">lower</span><span class="p">,</span>
+    <span class="n">upper</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="TestReverse">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestReverse">[docs]</a>
+<span class="k">class</span> <span class="nc">TestReverse</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="n">words_for_reversal</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;kAjak&#39;</span><span class="p">]</span>
+
+<div class="viewcode-block" id="TestReverse.test_reverse_string">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestReverse.test_reverse_string">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_reverse_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">TestReverse</span><span class="o">.</span><span class="n">words_for_reversal</span><span class="p">:</span>
+            <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">subTest</span><span class="p">(</span><span class="n">word</span><span class="o">=</span><span class="n">word</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="n">word</span><span class="p">),</span> <span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestCompression">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestCompression">[docs]</a>
+<span class="k">class</span> <span class="nc">TestCompression</span><span class="p">:</span>
+<div class="viewcode-block" id="TestCompression.test_string_compression">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestCompression.test_string_compression">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;text, expected_compressed_text&quot;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B1&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;abccbaA&#39;</span><span class="p">,</span> <span class="s1">&#39;a2b2c2A1&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;cc dc&#39;</span><span class="p">,</span> <span class="s1">&#39;c3 1d1&#39;</span><span class="p">)</span>
+
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_string_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">expected_compressed_text</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">compress</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_compressed_text</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestCustomJoin">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestCustomJoin">[docs]</a>
+<span class="k">class</span> <span class="nc">TestCustomJoin</span><span class="p">:</span>
+
+<div class="viewcode-block" id="TestCustomJoin.test_when_any_element_is_not_string">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestCustomJoin.test_when_any_element_is_not_string">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_when_any_element_is_not_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">custom_join</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;#&#39;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="s1">&#39;All elements must be strings&#39;</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TestCustomJoin.words_and_separator_fixture">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestCustomJoin.words_and_separator_fixture">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="s1">&#39;#&#39;</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="s1">&#39;$&#39;</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;garden&#39;</span><span class="p">],</span> <span class="s1">&#39;#&#39;</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;north&#39;</span><span class="p">,</span> <span class="s1">&#39;face&#39;</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">),</span>
+        <span class="p">([</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;world&#39;</span><span class="p">],</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+        <span class="p">([],</span> <span class="s1">&#39;#&#39;</span><span class="p">),</span> <span class="p">([</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;&#39;</span><span class="p">)])</span>
+    <span class="k">def</span> <span class="nf">words_and_separator_fixture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span></div>
+
+
+<div class="viewcode-block" id="TestCustomJoin.test_with_valid_data">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestCustomJoin.test_with_valid_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_with_valid_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">words_and_separator_fixture</span><span class="p">):</span>
+        <span class="n">words</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="n">words_and_separator_fixture</span>
+        <span class="k">assert</span> <span class="n">custom_join</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span> <span class="o">==</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">sep</span><span class="si">}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TestLowerAndUpper">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestLowerAndUpper">[docs]</a>
+<span class="k">class</span> <span class="nc">TestLowerAndUpper</span><span class="p">:</span>
+<div class="viewcode-block" id="TestLowerAndUpper.test_lower">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestLowerAndUpper.test_lower">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;text, expected_lowercased_text&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;ABCdef123&#39;</span><span class="p">,</span> <span class="s1">&#39;abcdef123&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Hello#world&#39;</span><span class="p">,</span> <span class="s1">&#39;hello#world&#39;</span><span class="p">),</span>
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_lower</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">expected_lowercased_text</span><span class="p">):</span>
+        <span class="n">lowercased_text</span> <span class="o">=</span> <span class="n">lower</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">lowercased_text</span> <span class="o">==</span> <span class="n">expected_lowercased_text</span></div>
+
+
+<div class="viewcode-block" id="TestLowerAndUpper.test_upper">
+<a class="viewcode-back" href="../../../docs/_build/html/tests.strings.html#tests.strings.test_string_manipulation.TestLowerAndUpper.test_upper">[docs]</a>
+    <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;text, expected_uppercased_text&#39;</span><span class="p">,</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;abcDEF8!&#39;</span><span class="p">,</span> <span class="s1">&#39;ABCDEF8!&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;north-face&#39;</span><span class="p">,</span> <span class="s1">&#39;NORTH-FACE&#39;</span><span class="p">)</span>
+    <span class="p">])</span>
+    <span class="k">def</span> <span class="nf">test_upper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">expected_uppercased_text</span><span class="p">):</span>
+        <span class="n">uppercased_text</span> <span class="o">=</span> <span class="n">upper</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">uppercased_text</span> <span class="o">==</span> <span class="n">expected_uppercased_text</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

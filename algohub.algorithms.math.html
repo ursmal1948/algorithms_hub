@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algohub.algorithms.math package &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="algohub.algorithms.numbers package" href="algohub.algorithms.numbers.html" />
+    <link rel="prev" title="algohub.algorithms.ciphers package" href="algohub.algorithms.ciphers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">algohub</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="algohub.html">algohub package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="algohub.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="algohub.algorithms.html">algohub.algorithms package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="algohub.data.html">algohub.data package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algohub.html#module-algohub">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">algohub</a></li>
+          <li class="breadcrumb-item"><a href="algohub.html">algohub package</a></li>
+          <li class="breadcrumb-item"><a href="algohub.algorithms.html">algohub.algorithms package</a></li>
+      <li class="breadcrumb-item active">algohub.algorithms.math package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/algohub.algorithms.math.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="algohub-algorithms-math-package">
+<h1>algohub.algorithms.math package<a class="headerlink" href="#algohub-algorithms-math-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-algohub.algorithms.math.arithmetic_algorithms">
+<span id="algohub-algorithms-math-arithmetic-algorithms-module"></span><h2>algohub.algorithms.math.arithmetic_algorithms module<a class="headerlink" href="#module-algohub.algorithms.math.arithmetic_algorithms" title="Link to this heading"></a></h2>
+<p>This module provides functions for various mathematical algorithms,</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.arithmetic_algorithms.babylonian_sqrt">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">babylonian_sqrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/arithmetic_algorithms.html#babylonian_sqrt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.arithmetic_algorithms.babylonian_sqrt" title="Link to this definition"></a></dt>
+<dd><p>Calculates the square root of a number using the Babylonian method.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The number for which the square root is to be calculated.
+accuracy (float): The level of precision for the approximation. Defaults to 0.001.</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: The approximate square root of the number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.arithmetic_algorithms.binary_exponentiation">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">binary_exponentiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/arithmetic_algorithms.html#binary_exponentiation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.arithmetic_algorithms.binary_exponentiation" title="Link to this definition"></a></dt>
+<dd><p>Computes the result of raising a given number to the power using binary exponentiation.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>number (int): The base number.
+power (int): The exponent to which the base number is raised.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The result of raising number to the power.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.arithmetic_algorithms.binary_search">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">binary_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">looked_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/arithmetic_algorithms.html#binary_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.arithmetic_algorithms.binary_search" title="Link to this definition"></a></dt>
+<dd><p>Performs binary search to find the index of the looked number in the sorted list of numbers</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>numbers (list[int]): A sorted list of integers.
+looked_number (int): The integer to be found in the list.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int | bool: If the looked_number is found in the list, returns the index of the number,
+otherwise False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.arithmetic_algorithms.iterative_factorial">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">iterative_factorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/arithmetic_algorithms.html#iterative_factorial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.arithmetic_algorithms.iterative_factorial" title="Link to this definition"></a></dt>
+<dd><p>Calculates the factorial of a non-negative integer using an iterative approach.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The non-negative integer for which to calculate the factorial.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The factorial of the integer.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If n is a negative number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.arithmetic_algorithms.recursive_factorial">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.arithmetic_algorithms.</span></span><span class="sig-name descname"><span class="pre">recursive_factorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/arithmetic_algorithms.html#recursive_factorial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.arithmetic_algorithms.recursive_factorial" title="Link to this definition"></a></dt>
+<dd><p>Calculates the factorial of a non-negative integer using a recursive approach.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>n (int): The non-negative integer for which to calculate the factorial.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The factorial of the integer.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If n is a negative number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.math.function_algorithms">
+<span id="algohub-algorithms-math-function-algorithms-module"></span><h2>algohub.algorithms.math.function_algorithms module<a class="headerlink" href="#module-algohub.algorithms.math.function_algorithms" title="Link to this heading"></a></h2>
+<p>This module provides algorithms related to mathematical functions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.function_algorithms.bisection_root">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">bisection_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/function_algorithms.html#bisection_root"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.function_algorithms.bisection_root" title="Link to this definition"></a></dt>
+<dd><dl>
+<dt>Finds a root of the given function within the interval [a, b]</dt><dd><p>using the bisection method.</p>
+</dd>
+<dt>Parameters:</dt><dd><dl class="simple">
+<dt>func (Callable[[int | float], int | float]): The function for</dt><dd><p>which the root is to be found.</p>
+</dd>
+</dl>
+<p>a (int | float): The left endpoint of the interval.
+b (int | float): The right endpoint of the interval.
+tolerance (float, optional): The acceptable level of error in</p>
+<blockquote>
+<div><p>the root approximation. Defaults to 1e-6.</p>
+</div></blockquote>
+<p>max_iterations (int, optional): The maximum number of iterations. Defaults to 100.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int | float: An approximation of the root within the specified tolerance.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If the function has the same sign at both endpoints (func(a) * func(b) &gt; 0).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.function_algorithms.horner_evaluation">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">horner_evaluation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coefficients</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/function_algorithms.html#horner_evaluation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.function_algorithms.horner_evaluation" title="Link to this definition"></a></dt>
+<dd><p>Evaluates a polynomial represented at the specified value of x.
+Used often to check whether x is the root of the equation or
+to calculate the value of polynpmial at x.</p>
+<dl>
+<dt>Parameters:</dt><dd><dl class="simple">
+<dt>coefficients (list[int | float]): List of coefficients</dt><dd><p>representing the polynomial.</p>
+</dd>
+</dl>
+<p>x (int | float): Value at which the polynomial is to be evaluated.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int | float: Result of the polynomial evaluation at the given value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.function_algorithms.quadratic_roots">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">quadratic_roots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/function_algorithms.html#quadratic_roots"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.function_algorithms.quadratic_roots" title="Link to this definition"></a></dt>
+<dd><p>Calculates the roots of a quadratic equation ax**2 + bx + c = 0.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>a (int | float): Coefficient of x^2.
+b (int | float): Coefficient of x.
+c (int | float): Constant term, function value when x = 0.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>tuple[int | float | complex, int | float | complex]: A tuple</dt><dd><p>containing the roots of the quadratic equation.The roots
+can be integers, floats, or complex numbers.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.function_algorithms.rectangular_integration">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">rectangular_integration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/function_algorithms.html#rectangular_integration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.function_algorithms.rectangular_integration" title="Link to this definition"></a></dt>
+<dd><p>Approximates the definite integral of a function using the rectangle rule.
+In other words - evaluates area under the curve by dividing the total area
+into smaller rectangles</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>func (Callable[[int | float], int | float]): Function to be integrate.
+a (int | float): The lower limit of integration.
+b (int | float): The upper limit of integration.
+n (int): The number of rectangles used to divide the area under the curve.</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: The estimated value of the definite integral.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.function_algorithms.trapezoidal_integration">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.function_algorithms.</span></span><span class="sig-name descname"><span class="pre">trapezoidal_integration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/function_algorithms.html#trapezoidal_integration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.function_algorithms.trapezoidal_integration" title="Link to this definition"></a></dt>
+<dd><p>Approximates the definite integral of a function using the trapezoidal
+rule. Evaluates area under the curve by dividing the total area into
+smaller trapzoids.</p>
+<dl>
+<dt>Parameters:</dt><dd><p>func (Callable[[int | float], int | float]): Function to be integrated.
+a (int | float): The lower limit of integration.
+b (int | float): The upper limit of integration.
+n (int): The number of trapezoids used to divide the area under</p>
+<blockquote>
+<div><p>the curve.</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>float: The estimated value of the definite integral.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.math.geometric_algorithms">
+<span id="algohub-algorithms-math-geometric-algorithms-module"></span><h2>algohub.algorithms.math.geometric_algorithms module<a class="headerlink" href="#module-algohub.algorithms.math.geometric_algorithms" title="Link to this heading"></a></h2>
+<p>This module provides functions for various geometric algorithms.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="algohub.algorithms.math.geometric_algorithms.Point">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">Point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/algohub/algorithms/math/geometric_algorithms.html#Point"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.geometric_algorithms.Point" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a point in 2D space with coordinates (x,y). Default x=0, y=0.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algohub.algorithms.math.geometric_algorithms.Point.x">
+<span class="sig-name descname"><span class="pre">x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#algohub.algorithms.math.geometric_algorithms.Point.x" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algohub.algorithms.math.geometric_algorithms.Point.y">
+<span class="sig-name descname"><span class="pre">y</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#algohub.algorithms.math.geometric_algorithms.Point.y" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.geometric_algorithms.are_points_collinear">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">are_points_collinear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algohub.algorithms.math.geometric_algorithms.Point" title="algohub.algorithms.math.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algohub.algorithms.math.geometric_algorithms.Point" title="algohub.algorithms.math.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algohub.algorithms.math.geometric_algorithms.Point" title="algohub.algorithms.math.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/geometric_algorithms.html#are_points_collinear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.geometric_algorithms.are_points_collinear" title="Link to this definition"></a></dt>
+<dd><p>Checks if three points are collinear.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>point1 (Point): The first point.
+point2 (Point): The second point.
+point3 (Point): The third point.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the points are collinear, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.geometric_algorithms.distance_between_points">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">distance_between_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algohub.algorithms.math.geometric_algorithms.Point" title="algohub.algorithms.math.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#algohub.algorithms.math.geometric_algorithms.Point" title="algohub.algorithms.math.geometric_algorithms.Point"><span class="pre">Point</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/geometric_algorithms.html#distance_between_points"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.geometric_algorithms.distance_between_points" title="Link to this definition"></a></dt>
+<dd><p>Calculates the distance between two points in a 2-dimensional plane.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>p1 (Point): The first point.
+p2 (Point): The second point.</p>
+</dd>
+<dt>Returns:</dt><dd><p>float: The distance between the two points.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.geometric_algorithms.is_triangle_rectangular">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">is_triangle_rectangular</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/geometric_algorithms.html#is_triangle_rectangular"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.geometric_algorithms.is_triangle_rectangular" title="Link to this definition"></a></dt>
+<dd><p>Checks if a triangle with given side lengths is a right-angled triangle.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>s1 (int): Length of side 1.
+s2 (int): Length of side 2.
+s3 (int): Length of side 3.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the triangle is a right-angled triangle, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.math.geometric_algorithms.is_triangle_valid">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.math.geometric_algorithms.</span></span><span class="sig-name descname"><span class="pre">is_triangle_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/math/geometric_algorithms.html#is_triangle_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.math.geometric_algorithms.is_triangle_valid" title="Link to this definition"></a></dt>
+<dd><p>Checks if given side lengths can form a valid triangle.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>a (int): Length of side a.
+b (int): Length of side b.
+c (int): Length of side c.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the side lengths form a valid triangle, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.math">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-algohub.algorithms.math" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="algohub.algorithms.ciphers.html" class="btn btn-neutral float-left" title="algohub.algorithms.ciphers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="algohub.algorithms.numbers.html" class="btn btn-neutral float-right" title="algohub.algorithms.numbers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

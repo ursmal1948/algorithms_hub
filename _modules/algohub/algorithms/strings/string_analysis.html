@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algohub.algorithms.strings.string_analysis &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../docs/_build/html/_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../docs/_build/html/_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../docs/_build/html/_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../docs/_build/html/_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../../docs/_build/html/_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../docs/_build/html/_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../docs/_build/html/_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../docs/_build/html/index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../docs/_build/html/index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">algohub.algorithms.strings.string_analysis</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for algohub.algorithms.strings.string_analysis</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides functions for string analysis.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+
+
+<div class="viewcode-block" id="is_anagram">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.strings.html#algohub.algorithms.strings.string_analysis.is_anagram">[docs]</a>
+<span class="k">def</span> <span class="nf">is_anagram</span><span class="p">(</span><span class="n">text1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">text2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if two strings are anagrams of each other.</span>
+<span class="sd">    An anagram is a word of phrase formed by rearranging the letters of a different word or phrase</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        text1 (str): The first string to check</span>
+<span class="sd">        text2 (str): The second string to check</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the strings are anagrams, False otherwise</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">text1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text1</span><span class="p">)</span> <span class="o">==</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text2</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="is_pangram">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.strings.html#algohub.algorithms.strings.string_analysis.is_pangram">[docs]</a>
+<span class="k">def</span> <span class="nf">is_pangram</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a string is a pangram.</span>
+<span class="sd">    A pangram is a sentence or phrase that contains every letter of the alphabet at least once.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        text (str): The string to check.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the string is a pangram, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="nb">len</span><span class="p">({</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()})</span> <span class="o">==</span> <span class="mi">26</span></div>
+
+
+
+<div class="viewcode-block" id="is_palindrome">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.strings.html#algohub.algorithms.strings.string_analysis.is_palindrome">[docs]</a>
+<span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if the given text is a palindrome.</span>
+
+<span class="sd">    A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and</span>
+<span class="sd">    removing all non-alphanumeric characters, it reads the same forward and backward.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        text (str): The text to be checked for palindrome.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the text is a palindrome, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">cleaned_text</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isalnum</span><span class="p">())</span>
+    <span class="n">start_index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">end_index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned_text</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">start_index</span> <span class="o">&lt;</span> <span class="n">end_index</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">cleaned_text</span><span class="p">[</span><span class="n">start_index</span><span class="p">]</span> <span class="o">!=</span> <span class="n">cleaned_text</span><span class="p">[</span><span class="n">end_index</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">start_index</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">end_index</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+
+<div class="viewcode-block" id="is_potential_palindrome">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.strings.html#algohub.algorithms.strings.string_analysis.is_potential_palindrome">[docs]</a>
+<span class="k">def</span> <span class="nf">is_potential_palindrome</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if the given string can be rearranged to form a palindrome.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        text (str): The text to be checked for potential palindrome.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the text can be rearranged to form a palindrome, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">cleaned_text</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">isalnum</span><span class="p">())</span>
+    <span class="n">chars_counter</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">cleaned_text</span><span class="p">)</span>
+    <span class="n">odd_count</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">count</span> <span class="o">%</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">chars_counter</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">odd_count</span> <span class="o">&lt;=</span> <span class="mi">1</span></div>
+
+
+
+<div class="viewcode-block" id="is_subsequence">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.strings.html#algohub.algorithms.strings.string_analysis.is_subsequence">[docs]</a>
+<span class="k">def</span> <span class="nf">is_subsequence</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subsequence</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a given text contains the specified subsequence.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        text (str): The text to be searched for the subsequence.</span>
+<span class="sd">        subsequence (str): The subsequence to check in the text.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the subsequence is present, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">subsequence</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="n">sub_index</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">sub_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">subsequence</span><span class="p">)</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">subsequence</span><span class="p">[</span><span class="n">sub_index</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+            <span class="n">sub_index</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">sub_index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">subsequence</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
+
+
+
+<div class="viewcode-block" id="is_substring">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.strings.html#algohub.algorithms.strings.string_analysis.is_substring">[docs]</a>
+<span class="k">def</span> <span class="nf">is_substring</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">substring</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a given text contains the specified substring.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        text (str): The text to be searched for the substring.</span>
+<span class="sd">        substring (str): The substring to check in the text.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the substring is present, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">lowercase_text</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">]</span>
+    <span class="n">lowercase_substring</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">substring</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">lowercase_substring</span> <span class="o">==</span> <span class="n">lowercase_text</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lowercase_substring</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lowercase_text</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">substring</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">lowercase_text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">lowercase_substring</span><span class="p">)]</span> <span class="o">==</span> <span class="n">lowercase_substring</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
+
+
+
+<div class="viewcode-block" id="count_substring_occurences">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.strings.html#algohub.algorithms.strings.string_analysis.count_substring_occurences">[docs]</a>
+<span class="k">def</span> <span class="nf">count_substring_occurences</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">substring</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Counts the number of occurrences of a substring within a given text.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        text (str): The text in which occurrences of the substring will be counted.</span>
+<span class="sd">        substring (str): The substring to be counted within the text.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The number of occurrences of the substring in the text.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">lowercase_text</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">]</span>
+    <span class="n">lowercase_substring</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">substring</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lowercase_text</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">lowercase_text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">lowercase_substring</span><span class="p">)]</span> <span class="o">==</span> <span class="n">lowercase_substring</span><span class="p">:</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">count</span></div>
+
+
+
+<div class="viewcode-block" id="contains_duplicates">
+<a class="viewcode-back" href="../../../../docs/_build/html/algohub.algorithms.strings.html#algohub.algorithms.strings.string_analysis.contains_duplicates">[docs]</a>
+<span class="k">def</span> <span class="nf">contains_duplicates</span><span class="p">(</span><span class="n">items</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a list of items contains any duplicates.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        items (list[Any]): List of items.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if duplicates are found, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">unique_elements</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_elements</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

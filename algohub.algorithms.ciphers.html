@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algohub.algorithms.ciphers package &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="algohub.algorithms.math package" href="algohub.algorithms.math.html" />
+    <link rel="prev" title="algohub.algorithms package" href="algohub.algorithms.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">algohub</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="algohub.html">algohub package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="algohub.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="algohub.algorithms.html">algohub.algorithms package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="algohub.data.html">algohub.data package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algohub.html#module-algohub">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">algohub</a></li>
+          <li class="breadcrumb-item"><a href="algohub.html">algohub package</a></li>
+          <li class="breadcrumb-item"><a href="algohub.algorithms.html">algohub.algorithms package</a></li>
+      <li class="breadcrumb-item active">algohub.algorithms.ciphers package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/algohub.algorithms.ciphers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="algohub-algorithms-ciphers-package">
+<h1>algohub.algorithms.ciphers package<a class="headerlink" href="#algohub-algorithms-ciphers-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-algohub.algorithms.ciphers.caesar">
+<span id="algohub-algorithms-ciphers-caesar-module"></span><h2>algohub.algorithms.ciphers.caesar module<a class="headerlink" href="#module-algohub.algorithms.ciphers.caesar" title="Link to this heading"></a></h2>
+<p>This module provides functions for encoding and decoding text using the Caesar cipher.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.caesar.CaesarCipher">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">algohub.algorithms.ciphers.caesar.</span></span><span class="sig-name descname"><span class="pre">CaesarCipher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/caesar.html#CaesarCipher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.caesar.CaesarCipher" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for implementing the Caesar cipher, a simple substitution cipher
+where each letter in the plaintext is shifted a certain number of places
+down or up the alphabet.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>sequence:str</dt><dd><p>A sequence of characters representing the alphabet. Default is the
+ASCII uppercase characters.</p>
+</dd>
+<dt>shift: int</dt><dd><p>The number of positions each letter is shifted. Default is 3.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.caesar.CaesarCipher.decrypt">
+<span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encrypted_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/caesar.html#CaesarCipher.decrypt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.caesar.CaesarCipher.decrypt" title="Link to this definition"></a></dt>
+<dd><p>Decrypts a given encrypted text using the Caesar cipher.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>encrypted_text (str): The encrypted text to be decrypted.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The decrypted text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.caesar.CaesarCipher.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/caesar.html#CaesarCipher.encrypt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.caesar.CaesarCipher.encrypt" title="Link to this definition"></a></dt>
+<dd><p>Encrypts a given text using the Caesar cipher.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The text to be encrypted.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The encrypted text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.caesar.CaesarCipher.sequence">
+<span class="sig-name descname"><span class="pre">sequence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></em><a class="headerlink" href="#algohub.algorithms.ciphers.caesar.CaesarCipher.sequence" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.caesar.CaesarCipher.shift">
+<span class="sig-name descname"><span class="pre">shift</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#algohub.algorithms.ciphers.caesar.CaesarCipher.shift" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.ciphers.morse">
+<span id="algohub-algorithms-ciphers-morse-module"></span><h2>algohub.algorithms.ciphers.morse module<a class="headerlink" href="#module-algohub.algorithms.ciphers.morse" title="Link to this heading"></a></h2>
+<p>This module provides functions for encoding and decoding text using the Morse code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.morse.MorseCode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">algohub.algorithms.ciphers.morse.</span></span><span class="sig-name descname"><span class="pre">MorseCode</span></span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/morse.html#MorseCode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.morse.MorseCode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for Morse Code encryption and decryption.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>morse_code (ClassVar[dict[str,str]]): Morse code dictionary.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.morse.MorseCode.decrypt">
+<span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encrypted_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/morse.html#MorseCode.decrypt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.morse.MorseCode.decrypt" title="Link to this definition"></a></dt>
+<dd><p>Decrypts the given Morse code to obtain the original text.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>encrypted_text (str): The encrypted text in Morse code.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The decrypted original text.</p>
+</dd>
+<dt>Raises:</dt><dd><dl class="simple">
+<dt>ValueError: If a character in the text is not present</dt><dd><p>in the reversed Morse code dictionary.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.morse.MorseCode.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/morse.html#MorseCode.encrypt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.morse.MorseCode.encrypt" title="Link to this definition"></a></dt>
+<dd><p>Encrypts the given text using Morse code.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The text to be encrypted.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The encrypted text represented in Morse code.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If a character in the input is not in Morse code dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.morse.MorseCode.morse_code">
+<span class="sig-name descname"><span class="pre">morse_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'(':</span> <span class="pre">'-.--.',</span> <span class="pre">')':</span> <span class="pre">'-.--.-',</span> <span class="pre">',':</span> <span class="pre">'--..--',</span> <span class="pre">'-':</span> <span class="pre">'-....-',</span> <span class="pre">'.':</span> <span class="pre">'.-.-.-',</span> <span class="pre">'/':</span> <span class="pre">'-..-.',</span> <span class="pre">'0':</span> <span class="pre">'-----',</span> <span class="pre">'1':</span> <span class="pre">'.----',</span> <span class="pre">'2':</span> <span class="pre">'..---',</span> <span class="pre">'3':</span> <span class="pre">'...--',</span> <span class="pre">'4':</span> <span class="pre">'....-',</span> <span class="pre">'5':</span> <span class="pre">'.....',</span> <span class="pre">'6':</span> <span class="pre">'-....',</span> <span class="pre">'7':</span> <span class="pre">'--...',</span> <span class="pre">'8':</span> <span class="pre">'---..',</span> <span class="pre">'9':</span> <span class="pre">'----.',</span> <span class="pre">'?':</span> <span class="pre">'..--..',</span> <span class="pre">'A':</span> <span class="pre">'.-',</span> <span class="pre">'B':</span> <span class="pre">'-...',</span> <span class="pre">'C':</span> <span class="pre">'-.-.',</span> <span class="pre">'D':</span> <span class="pre">'-..',</span> <span class="pre">'E':</span> <span class="pre">'.',</span> <span class="pre">'F':</span> <span class="pre">'..-.',</span> <span class="pre">'G':</span> <span class="pre">'--.',</span> <span class="pre">'H':</span> <span class="pre">'....',</span> <span class="pre">'I':</span> <span class="pre">'..',</span> <span class="pre">'J':</span> <span class="pre">'.---',</span> <span class="pre">'K':</span> <span class="pre">'-.-',</span> <span class="pre">'L':</span> <span class="pre">'.-..',</span> <span class="pre">'M':</span> <span class="pre">'--',</span> <span class="pre">'N':</span> <span class="pre">'-.',</span> <span class="pre">'O':</span> <span class="pre">'---',</span> <span class="pre">'P':</span> <span class="pre">'.--.',</span> <span class="pre">'Q':</span> <span class="pre">'--.-',</span> <span class="pre">'R':</span> <span class="pre">'.-.',</span> <span class="pre">'S':</span> <span class="pre">'...',</span> <span class="pre">'T':</span> <span class="pre">'-',</span> <span class="pre">'U':</span> <span class="pre">'..-',</span> <span class="pre">'V':</span> <span class="pre">'...-',</span> <span class="pre">'W':</span> <span class="pre">'.--',</span> <span class="pre">'X':</span> <span class="pre">'-..-',</span> <span class="pre">'Y':</span> <span class="pre">'-.--',</span> <span class="pre">'Z':</span> <span class="pre">'--..'}</span></em><a class="headerlink" href="#algohub.algorithms.ciphers.morse.MorseCode.morse_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.ciphers.vigenere">
+<span id="algohub-algorithms-ciphers-vigenere-module"></span><h2>algohub.algorithms.ciphers.vigenere module<a class="headerlink" href="#module-algohub.algorithms.ciphers.vigenere" title="Link to this heading"></a></h2>
+<p>This module provides functions for encoding and decoding text using the Vigenère cipher.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.vigenere.VigenereCipher">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">algohub.algorithms.ciphers.vigenere.</span></span><span class="sig-name descname"><span class="pre">VigenereCipher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'KEY'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vigenere_generator:</span> <span class="pre">~algohub.algorithms.ciphers.vigenere._VigenereGenerator</span> <span class="pre">=</span> <span class="pre">&lt;algohub.algorithms.ciphers.vigenere._VigenereSquareGenerator</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/vigenere.html#VigenereCipher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.vigenere.VigenereCipher" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for Vigenere Cipher encryption and decryption.</p>
+<dl>
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>key (str): A key used for encryption and decryption. It determines the row in the Vigenere</dt><dd><p>square to use for each character.</p>
+</dd>
+</dl>
+<p>vigenere_generator (_VigenereGenerator): An instance of the Vigenere square generator.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.vigenere.VigenereCipher.decrypt">
+<span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encrypted_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/vigenere.html#VigenereCipher.decrypt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.vigenere.VigenereCipher.decrypt" title="Link to this definition"></a></dt>
+<dd><p>Decrypts the given encrypted text using the Vigenere cipher and provided key.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>encrypted_text (str): Text to be decrypted.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The decrypted text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.vigenere.VigenereCipher.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/ciphers/vigenere.html#VigenereCipher.encrypt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.ciphers.vigenere.VigenereCipher.encrypt" title="Link to this definition"></a></dt>
+<dd><p>Encrypts the given text using the Vigenere cipher and provided key.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): Text to be encrypted.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The encrypted text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.vigenere.VigenereCipher.key">
+<span class="sig-name descname"><span class="pre">key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KEY'</span></em><a class="headerlink" href="#algohub.algorithms.ciphers.vigenere.VigenereCipher.key" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="algohub.algorithms.ciphers.vigenere.VigenereCipher.vigenere_generator">
+<span class="sig-name descname"><span class="pre">vigenere_generator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">_VigenereGenerator</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;algohub.algorithms.ciphers.vigenere._VigenereSquareGenerator</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#algohub.algorithms.ciphers.vigenere.VigenereCipher.vigenere_generator" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.ciphers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-algohub.algorithms.ciphers" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="algohub.algorithms.html" class="btn btn-neutral float-left" title="algohub.algorithms package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="algohub.algorithms.math.html" class="btn btn-neutral float-right" title="algohub.algorithms.math package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

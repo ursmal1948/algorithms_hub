@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algohub.data.user &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../docs/_build/html/_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../docs/_build/html/_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../docs/_build/html/_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../docs/_build/html/_static/doctools.js?v=888ff710"></script>
+        <script src="../../../docs/_build/html/_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../docs/_build/html/_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../docs/_build/html/genindex.html" />
+    <link rel="search" title="Search" href="../../../docs/_build/html/search.html" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../docs/_build/html/index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../docs/_build/html/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs/_build/html/modules.html">algohub</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../docs/_build/html/index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../docs/_build/html/index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">algohub.data.user</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for algohub.data.user</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module provides various functions for retrieving string / strings from user.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+
+
+<div class="viewcode-block" id="get_str">
+<a class="viewcode-back" href="../../../docs/_build/html/algohub.data.html#algohub.data.user.get_str">[docs]</a>
+<span class="k">def</span> <span class="nf">get_str</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns a string retrieved from the user</span>
+<span class="sd">    :param message:  A message to the user</span>
+<span class="sd">    :return: A string retrieved from the user</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_number_matches_regex">
+<a class="viewcode-back" href="../../../docs/_build/html/algohub.data.html#algohub.data.user.get_number_matches_regex">[docs]</a>
+<span class="k">def</span> <span class="nf">get_number_matches_regex</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span> <span class="n">regex</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns an int number or a float retrieved from the user whose matches the given pattern</span>
+<span class="sd">    :param message: A message to the user</span>
+<span class="sd">    :param data_type: The type of number being retrieved</span>
+<span class="sd">    :param regex: The pattern for the number being retrievec</span>
+<span class="sd">    :return: an int or the float retrieved from the user</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Incorrect type&#39;</span><span class="p">)</span>
+    <span class="n">data_type_regex</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># struktura przechowujaca dane w postaci klucz wartpsc</span>
+        <span class="nb">int</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^-?\d+$&#39;</span><span class="p">,</span>
+        <span class="nb">float</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^-?\d+(\.\d+)?$&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">data_regex</span> <span class="o">=</span> <span class="n">regex</span> <span class="k">if</span> <span class="n">regex</span> <span class="k">else</span> <span class="n">data_type_regex</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">data_regex</span><span class="p">,</span> <span class="n">v</span> <span class="o">:=</span> <span class="n">get_str</span><span class="p">(</span><span class="n">message</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Incorrect data format&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data_type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_number_matches_regex_loop">
+<a class="viewcode-back" href="../../../docs/_build/html/algohub.data.html#algohub.data.user.get_number_matches_regex_loop">[docs]</a>
+<span class="k">def</span> <span class="nf">get_number_matches_regex_loop</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span> <span class="n">regex</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrievs data from the user as long as it is in valid interger or floating point format accorgind</span>
+<span class="sd">    to the provided pattern</span>
+<span class="sd">    :param message: A message to the user</span>
+<span class="sd">    :param data_type: The type of number being retrieved</span>
+<span class="sd">    :param regex: The pattern for the number being retrievec</span>
+<span class="sd">    :return: an int or the float retrieved from the user</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Incorrect type&#39;</span><span class="p">)</span>
+    <span class="n">data_type_regex</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nb">int</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^-?\d+$&#39;</span><span class="p">,</span>
+        <span class="nb">float</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^-?\d+(\.\d+)?$&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">data_regex</span> <span class="o">=</span> <span class="n">regex</span> <span class="k">if</span> <span class="n">regex</span> <span class="k">else</span> <span class="n">data_type_regex</span><span class="p">[</span><span class="n">data_type</span><span class="p">]</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">data_regex</span><span class="p">,</span> <span class="n">v</span> <span class="o">:=</span> <span class="n">get_str</span><span class="p">(</span><span class="n">message</span><span class="p">)):</span>
+        <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">data_type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_number">
+<a class="viewcode-back" href="../../../docs/_build/html/algohub.data.html#algohub.data.user.get_number">[docs]</a>
+<span class="k">def</span> <span class="nf">get_number</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retrieves data from the user as long as it is  a valid int or float</span>
+<span class="sd">    :param message:  A message to the user</span>
+<span class="sd">    :param data_type: The type of number being retrieved</span>
+<span class="sd">    :return: An int number or a float number retrieved from the user</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Incorrect type&#39;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">data_type</span><span class="p">(</span><span class="n">get_str</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">v</span></div>
+
+
+
+<div class="viewcode-block" id="get_number_loop">
+<a class="viewcode-back" href="../../../docs/_build/html/algohub.data.html#algohub.data.user.get_number_loop">[docs]</a>
+<span class="k">def</span> <span class="nf">get_number_loop</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns an int number or float retrieved from the user</span>
+<span class="sd">    :param message:  A message to the user</span>
+<span class="sd">    :param data_type: The type of number being retrieved</span>
+<span class="sd">    :return int|float: int or float retrieved from the user</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">data_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Incorrect type&#39;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">data_type</span><span class="p">(</span><span class="n">get_str</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">v</span></div>
+
+
+
+<div class="viewcode-block" id="get_n_numbers">
+<a class="viewcode-back" href="../../../docs/_build/html/algohub.data.html#algohub.data.user.get_n_numbers">[docs]</a>
+<span class="k">def</span> <span class="nf">get_n_numbers</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return list of n int numbers or list of n float retrieved from the user</span>
+<span class="sd">    :param n: the number of the items</span>
+<span class="sd">    :param data_type: the tpye of number being retrieved</span>
+<span class="sd">    :return: N int numbers or n float numbers retrieved from the user</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The number of items is not correct&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">get_number</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Podaj liczbe nr </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">data_type</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span></div>
+
+
+
+<div class="viewcode-block" id="get_n_numbers_loop">
+<a class="viewcode-back" href="../../../docs/_build/html/algohub.data.html#algohub.data.user.get_n_numbers_loop">[docs]</a>
+<span class="k">def</span> <span class="nf">get_n_numbers_loop</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return list of n numbers from the user as long as they are in a valid int or a float format</span>
+<span class="sd">    :param n:   The number of items</span>
+<span class="sd">    :param data_type: The type of number being retrieved</span>
+<span class="sd">    :return:    N int numbers or n float numbers retrieved from the user</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;The number of items is not correct&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">get_number_loop</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Podaj liczbe nr </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">data_type</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

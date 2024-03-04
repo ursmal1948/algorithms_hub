@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>algohub.algorithms.strings package &mdash; Algorithms&#39; hub 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8d563738"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="algohub.data package" href="algohub.data.html" />
+    <link rel="prev" title="algohub.algorithms.numbers package" href="algohub.algorithms.numbers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Algorithms' hub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">algohub</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="algohub.html">algohub package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="algohub.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="algohub.algorithms.html">algohub.algorithms package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="algohub.data.html">algohub.data package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="algohub.html#module-algohub">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Algorithms' hub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">algohub</a></li>
+          <li class="breadcrumb-item"><a href="algohub.html">algohub package</a></li>
+          <li class="breadcrumb-item"><a href="algohub.algorithms.html">algohub.algorithms package</a></li>
+      <li class="breadcrumb-item active">algohub.algorithms.strings package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/algohub.algorithms.strings.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="algohub-algorithms-strings-package">
+<h1>algohub.algorithms.strings package<a class="headerlink" href="#algohub-algorithms-strings-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-algohub.algorithms.strings.custom_string_sorting">
+<span id="algohub-algorithms-strings-custom-string-sorting-module"></span><h2>algohub.algorithms.strings.custom_string_sorting module<a class="headerlink" href="#module-algohub.algorithms.strings.custom_string_sorting" title="Link to this heading"></a></h2>
+<p>This module provides functions for string sorting.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.custom_string_sorting.compare_chars_sum">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.custom_string_sorting.</span></span><span class="sig-name descname"><span class="pre">compare_chars_sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/custom_string_sorting.html#compare_chars_sum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.custom_string_sorting.compare_chars_sum" title="Link to this definition"></a></dt>
+<dd><p>Compares two strings based on the difference in the sum of ASCII values of their characters.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text1 (str): The first string for comparison.
+text2 (str): The second string for comparison.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>int:</dt><dd><ul class="simple">
+<li><p>A negative value if the sum of ASCII values in text1 is less than in text2.</p></li>
+<li><p>0 if both texts have the same sum of ASCII values.</p></li>
+<li><p>A positive value if the sum of ASCII values in text1 is greater than in text2.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.custom_string_sorting.compare_vowels_count">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.custom_string_sorting.</span></span><span class="sig-name descname"><span class="pre">compare_vowels_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/custom_string_sorting.html#compare_vowels_count"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.custom_string_sorting.compare_vowels_count" title="Link to this definition"></a></dt>
+<dd><p>Compares two strings based on the difference in their vowel counts.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text1 (str): The first string for comparison.
+text2 (str): The second string for comparison.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>int:</dt><dd><ul class="simple">
+<li><p>A negative value if text1 has fewer vowels than text2.</p></li>
+<li><p>0 if both texts have the same number of vowels.</p></li>
+<li><p>A positive value if text1 has more vowels than text2.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.custom_string_sorting.sort_items">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.custom_string_sorting.</span></span><span class="sig-name descname"><span class="pre">sort_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sorting_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/custom_string_sorting.html#sort_items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.custom_string_sorting.sort_items" title="Link to this definition"></a></dt>
+<dd><p>Sorts a list of strings using a custom sorting function.</p>
+<dl>
+<dt>Parameters:</dt><dd><p>items (list[str]): A list of strings to be sorted.
+sorting_fn (Callable[[str, str], int]): A callable function that</p>
+<blockquote>
+<div><p>takes two strings as argumentsand returns an integer. This
+function defines the custom sorting logic.</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>list[str]: A new list of strings according to the specified sorting function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.strings.string_analysis">
+<span id="algohub-algorithms-strings-string-analysis-module"></span><h2>algohub.algorithms.strings.string_analysis module<a class="headerlink" href="#module-algohub.algorithms.strings.string_analysis" title="Link to this heading"></a></h2>
+<p>This module provides functions for string analysis.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_analysis.contains_duplicates">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_analysis.</span></span><span class="sig-name descname"><span class="pre">contains_duplicates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_analysis.html#contains_duplicates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_analysis.contains_duplicates" title="Link to this definition"></a></dt>
+<dd><p>Checks if a list of items contains any duplicates.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>items (list[Any]): List of items.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if duplicates are found, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_analysis.count_substring_occurences">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_analysis.</span></span><span class="sig-name descname"><span class="pre">count_substring_occurences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substring</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_analysis.html#count_substring_occurences"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_analysis.count_substring_occurences" title="Link to this definition"></a></dt>
+<dd><p>Counts the number of occurrences of a substring within a given text.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The text in which occurrences of the substring will be counted.
+substring (str): The substring to be counted within the text.</p>
+</dd>
+<dt>Returns:</dt><dd><p>int: The number of occurrences of the substring in the text.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_analysis.is_anagram">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_analysis.</span></span><span class="sig-name descname"><span class="pre">is_anagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_analysis.html#is_anagram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_analysis.is_anagram" title="Link to this definition"></a></dt>
+<dd><p>Checks if two strings are anagrams of each other.
+An anagram is a word of phrase formed by rearranging the letters of a different word or phrase</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text1 (str): The first string to check
+text2 (str): The second string to check</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the strings are anagrams, False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_analysis.is_palindrome">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_analysis.</span></span><span class="sig-name descname"><span class="pre">is_palindrome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_analysis.html#is_palindrome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_analysis.is_palindrome" title="Link to this definition"></a></dt>
+<dd><p>Checks if the given text is a palindrome.</p>
+<p>A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and
+removing all non-alphanumeric characters, it reads the same forward and backward.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The text to be checked for palindrome.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the text is a palindrome, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_analysis.is_pangram">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_analysis.</span></span><span class="sig-name descname"><span class="pre">is_pangram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_analysis.html#is_pangram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_analysis.is_pangram" title="Link to this definition"></a></dt>
+<dd><p>Checks if a string is a pangram.
+A pangram is a sentence or phrase that contains every letter of the alphabet at least once.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The string to check.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the string is a pangram, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_analysis.is_potential_palindrome">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_analysis.</span></span><span class="sig-name descname"><span class="pre">is_potential_palindrome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_analysis.html#is_potential_palindrome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_analysis.is_potential_palindrome" title="Link to this definition"></a></dt>
+<dd><p>Checks if the given string can be rearranged to form a palindrome.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The text to be checked for potential palindrome.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the text can be rearranged to form a palindrome, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_analysis.is_subsequence">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_analysis.</span></span><span class="sig-name descname"><span class="pre">is_subsequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subsequence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_analysis.html#is_subsequence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_analysis.is_subsequence" title="Link to this definition"></a></dt>
+<dd><p>Checks if a given text contains the specified subsequence.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The text to be searched for the subsequence.
+subsequence (str): The subsequence to check in the text.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the subsequence is present, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_analysis.is_substring">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_analysis.</span></span><span class="sig-name descname"><span class="pre">is_substring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">substring</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_analysis.html#is_substring"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_analysis.is_substring" title="Link to this definition"></a></dt>
+<dd><p>Checks if a given text contains the specified substring.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The text to be searched for the substring.
+substring (str): The substring to check in the text.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: True if the substring is present, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.strings.string_manipulation">
+<span id="algohub-algorithms-strings-string-manipulation-module"></span><h2>algohub.algorithms.strings.string_manipulation module<a class="headerlink" href="#module-algohub.algorithms.strings.string_manipulation" title="Link to this heading"></a></h2>
+<p>This module provides functions for string analysis.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_manipulation.compress">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_manipulation.</span></span><span class="sig-name descname"><span class="pre">compress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_manipulation.html#compress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_manipulation.compress" title="Link to this definition"></a></dt>
+<dd><p>Compresses a given string by representing the count of occurrences for each character.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The string to be compressed.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The compressed string indicating the count of each character.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_manipulation.custom_join">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_manipulation.</span></span><span class="sig-name descname"><span class="pre">custom_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">words</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_manipulation.html#custom_join"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_manipulation.custom_join" title="Link to this definition"></a></dt>
+<dd><p>Concatenates a list of strings using the specified separator.</p>
+<dl>
+<dt>Parameters:</dt><dd><p>words (list[str]): The list of strings to be joined.
+separator (str): The string to be used as a separator</p>
+<blockquote>
+<div><p>between each element in the list. Default is ‘’.</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>str: A string resulting from concatenating the elements of the list with the separator.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If any element in the ‘words’ list is not a string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_manipulation.lower">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_manipulation.</span></span><span class="sig-name descname"><span class="pre">lower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_manipulation.html#lower"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_manipulation.lower" title="Link to this definition"></a></dt>
+<dd><p>Converts all uppercase letters in the string to lowercase.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The string to be converted to lowercase.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The string with all uppercase letters converted to lowercase.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_manipulation.reverse">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_manipulation.</span></span><span class="sig-name descname"><span class="pre">reverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_manipulation.html#reverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_manipulation.reverse" title="Link to this definition"></a></dt>
+<dd><p>Reverses a given string.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The string to be reversed.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The reversed string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="algohub.algorithms.strings.string_manipulation.upper">
+<span class="sig-prename descclassname"><span class="pre">algohub.algorithms.strings.string_manipulation.</span></span><span class="sig-name descname"><span class="pre">upper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/algohub/algorithms/strings/string_manipulation.html#upper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#algohub.algorithms.strings.string_manipulation.upper" title="Link to this definition"></a></dt>
+<dd><p>Converts all lowercase letters in the string to uppercase.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>text (str): The string to be converted to uppercase.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The string with all lowercase letters converted to uppercase.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-algohub.algorithms.strings">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-algohub.algorithms.strings" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="algohub.algorithms.numbers.html" class="btn btn-neutral float-left" title="algohub.algorithms.numbers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="algohub.data.html" class="btn btn-neutral float-right" title="algohub.data package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ula Malinowska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
